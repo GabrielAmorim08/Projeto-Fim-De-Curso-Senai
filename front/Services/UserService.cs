@@ -44,6 +44,7 @@ public class UserService
     {
         return null;
     }
-    return "Logado com sucesso";
+    var token = await result.Content.ReadAsStringAsync();
+    return token;
     }
 }

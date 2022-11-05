@@ -4,7 +4,7 @@ using dto;
 namespace back.Controllers;
 
 using back.Services;
-using back.Model;
+using Model;
 
 [ApiController]
 [Route("user")]
@@ -51,7 +51,7 @@ public class UserController : ControllerBase
         return Ok("Usuario cadastrado com sucesso");
     }
     [HttpPost("Login")]
-    public async Task<IActionResult> Login([FromBody]UsuarioDTO user)
+    public async Task<IActionResult> Login([FromBody]UsuarioDTO user, [FromServices]TokenService service)
     {
         using tcc_siteContext context = new tcc_siteContext();
         var possibleUser = context.Usuarios.FirstOrDefault( u => u.Nome == user.Nome);
@@ -65,7 +65,7 @@ public class UserController : ControllerBase
             return BadRequest("Senha inválida");
         }
         var token = await service.CreateToken(possibleUser);
-        return Ok(token.value);
+        return Ok(token.Value);
     }
 
     [HttpPost("Update")]
