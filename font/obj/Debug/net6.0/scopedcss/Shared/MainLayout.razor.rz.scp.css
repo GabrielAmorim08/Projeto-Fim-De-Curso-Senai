@@ -1,0 +1,33 @@
+.navigation[b-yu7g06b3ii] {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    list-style: none;
+}
+
+.navigation a[b-yu7g06b3ii] {
+    text-decoration: none;
+    display: block;
+    color: white;
+    padding: 1em;
+}
+
+.navigation a:hover[b-yu7g06b3ii] {
+    background-color: blueviolet;
+}
+
+header[b-yu7g06b3ii] {
+    background-color:deepskyblue;
+    color: white;
+}
+
+.headercontainer[b-yu7g06b3ii] {
+    padding-left: 2vw;
+    padding-right: 5vw;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}

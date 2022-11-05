@@ -1,0 +1,30 @@
+@page "/cadastro"
+@using Services;
+@using Microsoft.AspNetCore.Components.Server.ProtectedBrowserStorage
+@inject NavigationManager nav
+@inject ProtectedSessionStorage storage
+@inject UserService service 
+
+            <h2 class="title">Cadastrar</h2>
+              <input type="text" placeholder="Nome de Usuário" @bind-value ="@nome"/>
+              <input type="email" placeholder="Email" @bind-value = "@email"/>
+              <input type="password" placeholder="Nova Senha" @bind-value = "@senha"/>         
+                <input type="password" placeholder="Confirmar Senha" @bind-value = "@confsenha"/>
+                <button onclick="@CriarConta">Criar Conta</button>
+                 <button onclick="">Login</button>
+
+@code
+{       private string nome;
+        private string senha;
+        private string confsenha;
+        private string email;   
+        public async void CriarConta()
+        {
+        await service.Register(
+            this.nome, 
+            this.email,
+            this.senha, 
+            this.confsenha);
+        }
+
+}
