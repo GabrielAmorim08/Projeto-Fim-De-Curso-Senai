@@ -5,13 +5,13 @@ using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace back.Model
 {
-    public partial class siteContext : DbContext
+    public partial class tcc_siteContext : DbContext
     {
-        public siteContext()
+        public tcc_siteContext()
         {
         }
 
-        public siteContext(DbContextOptions<siteContext> options)
+        public tcc_siteContext(DbContextOptions<tcc_siteContext> options)
             : base(options)
         {
         }
@@ -25,8 +25,8 @@ namespace back.Model
         {
             if (!optionsBuilder.IsConfigured)
             {
-
-                optionsBuilder.UseSqlServer("Data Source=SNCCH01LABF106\\SQLEXPRESS;Initial Catalog=site;Integrated Security=True");
+#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
+                optionsBuilder.UseSqlServer("Data Source=SNCCH01LABF106\\SQLEXPRESS;Initial Catalog=tcc_site;Integrated Security=True");
             }
         }
 
@@ -88,9 +88,7 @@ namespace back.Model
 
                 entity.Property(e => e.Confsenha).IsUnicode(false);
 
-                entity.Property(e => e.Email)
-                    .HasMaxLength(20)
-                    .IsUnicode(false);
+                entity.Property(e => e.Email).IsUnicode(false);
 
                 entity.Property(e => e.Matricula)
                     .HasMaxLength(20)

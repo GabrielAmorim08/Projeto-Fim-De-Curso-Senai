@@ -1,7 +1,11 @@
 using Microsoft.AspNetCore.Mvc;
 using dto;
+
 namespace back.Controllers;
+
+using back.Services;
 using back.Model;
+
 [ApiController]
 [Route("user")]
 public class UserController : ControllerBase
@@ -9,7 +13,7 @@ public class UserController : ControllerBase
     [HttpPost("Register")]
     public IActionResult register([FromBody] UsuarioDTO user)
     {
-        using siteContext context = new siteContext();
+        using tcc_siteContext context = new tcc_siteContext();
         List<string> errors = new List<string>();
         if (user.Nome == null)
         {
@@ -47,9 +51,9 @@ public class UserController : ControllerBase
         return Ok("Usuario cadastrado com sucesso");
     }
     [HttpPost("Login")]
-    public IActionResult Login([FromBody]UsuarioDTO user)
+    public async Task<IActionResult> Login([FromBody]UsuarioDTO user)
     {
-        using siteContext context = new siteContext();
+        using tcc_siteContext context = new tcc_siteContext();
         var possibleUser = context.Usuarios.FirstOrDefault( u => u.Nome == user.Nome);
 
         if(possibleUser == null)
@@ -60,7 +64,8 @@ public class UserController : ControllerBase
         {
             return BadRequest("Senha inválida");
         }
-        return Ok();
+        var token = await service.CreateToken(possibleUser);
+        return Ok(token.value);
     }
 
     [HttpPost("Update")]

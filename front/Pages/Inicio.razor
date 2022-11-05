@@ -2,16 +2,22 @@
 @using Services;
 @inject UserService service
 
-<p>@nomeinicio</p>
-<h1>Hola</h1>
+<div>
+    <p>@nomeinicio</p>
+    <ul>
+        <li><a href="/perfil">Perfil</a></li>
+        <li><a href="/atividades">Atividades</a></li>
+        <li><a href="/calendario">Calendario</a></li>
+    </ul>
+</div>
 
 
 @code
 {
-    private string nomeinicio;
+    private string nomeinicio = "Seja bem vindo";
 
     public async void mostrarnome()
     {
-        nomeinicio = ("seja bem vindo " + this.service.Login);
+        nomeinicio = "seja bem vindo ";
     }
 }
