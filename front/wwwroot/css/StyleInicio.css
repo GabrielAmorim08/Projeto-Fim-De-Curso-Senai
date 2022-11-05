@@ -1,0 +1,8 @@
+
+div.iniciocontainer
+{
+    display: flex;
+    flex-direction: auto;
+    background-color: #fa50d8;
+
+}

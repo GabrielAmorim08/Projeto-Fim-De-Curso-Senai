@@ -41,6 +41,7 @@ public class UserController : ControllerBase
         }
 
         Usuario Usuario = new Usuario();
+        Usuario.Matricula = user.Matricula;
         Usuario.Nome = user.Nome;
         Usuario.Email = user.Email;
         Usuario.Senha = user.Senha;
@@ -54,7 +55,7 @@ public class UserController : ControllerBase
     public async Task<IActionResult> Login([FromBody]UsuarioDTO user, [FromServices]TokenService service)
     {
         using tcc_siteContext context = new tcc_siteContext();
-        var possibleUser = context.Usuarios.FirstOrDefault( u => u.Nome == user.Nome);
+        var possibleUser = context.Usuarios.FirstOrDefault( u => u.Matricula == user.Matricula);
 
         if(possibleUser == null)
         {

@@ -12,35 +12,68 @@
   "ProjectWorkspaceState": {
     "TagHelpers": [
       {
-        "HashCode": -1902477830,
+        "HashCode": -1939380583,
         "Kind": "Components.Component",
-        "Name": "front.Pages.Login",
+        "Name": "front.Pages.Administrador",
         "AssemblyName": "front",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "Login"
+            "TagName": "Administrador"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "front.Pages.Login"
+          "Common.TypeName": "front.Pages.Administrador"
         }
       },
       {
-        "HashCode": -607817896,
+        "HashCode": -902523965,
         "Kind": "Components.Component",
-        "Name": "front.Pages.Login",
+        "Name": "front.Pages.Administrador",
         "AssemblyName": "front",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "front.Pages.Login"
+            "TagName": "front.Pages.Administrador"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "front.Pages.Login",
+          "Common.TypeName": "front.Pages.Administrador",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": -676236611,
+        "Kind": "Components.Component",
+        "Name": "front.Pages.LoginCadastro",
+        "AssemblyName": "front",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "LoginCadastro"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "front.Pages.LoginCadastro"
+        }
+      },
+      {
+        "HashCode": 1226303672,
+        "Kind": "Components.Component",
+        "Name": "front.Pages.LoginCadastro",
+        "AssemblyName": "front",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "front.Pages.LoginCadastro"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "front.Pages.LoginCadastro",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -74,72 +107,6 @@
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
           "Common.TypeName": "front.Pages.Inicio",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": -1115677546,
-        "Kind": "Components.Component",
-        "Name": "front.Pages.Cadastro",
-        "AssemblyName": "front",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Cadastro"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "front.Pages.Cadastro"
-        }
-      },
-      {
-        "HashCode": -1300796900,
-        "Kind": "Components.Component",
-        "Name": "front.Pages.Cadastro",
-        "AssemblyName": "front",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "front.Pages.Cadastro"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "front.Pages.Cadastro",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": -1939380583,
-        "Kind": "Components.Component",
-        "Name": "front.Pages.Administrador",
-        "AssemblyName": "front",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Administrador"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "front.Pages.Administrador"
-        }
-      },
-      {
-        "HashCode": -902523965,
-        "Kind": "Components.Component",
-        "Name": "front.Pages.Administrador",
-        "AssemblyName": "front",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "front.Pages.Administrador"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "front.Pages.Administrador",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -16645,11 +16612,6 @@
   "RootNamespace": "front",
   "Documents": [
     {
-      "FilePath": "c:\\Users\\Aluno\\Documents\\GitHub\\site_tcc\\front\\Pages\\Login.razor",
-      "TargetPath": "Pages\\Login.razor",
-      "FileKind": "component"
-    },
-    {
       "FilePath": "c:\\Users\\Aluno\\Documents\\GitHub\\site_tcc\\front\\Pages\\Administrador.razor",
       "TargetPath": "Pages\\Administrador.razor",
       "FileKind": "component"
@@ -16660,8 +16622,8 @@
       "FileKind": "component"
     },
     {
-      "FilePath": "c:\\Users\\Aluno\\Documents\\GitHub\\site_tcc\\front\\Pages\\Cadastro.razor",
-      "TargetPath": "Pages\\Cadastro.razor",
+      "FilePath": "c:\\Users\\Aluno\\Documents\\GitHub\\site_tcc\\front\\Pages\\LoginCadastro.razor",
+      "TargetPath": "Pages\\LoginCadastro.razor",
       "FileKind": "component"
     },
     {

@@ -16,12 +16,14 @@ public class UserService
     }
     
     public async Task Register(
+        string matricula,
         string nome,
         string email,
         string senha,
         string confsenha)
     {
         UsuarioDTO user = new UsuarioDTO();
+        user.Matricula = matricula;
         user.Nome = nome;
         user.Email = email;
         user.Senha = senha;
@@ -31,12 +33,12 @@ public class UserService
     }
 
     public async Task<string> Login(
-        string nome,
+        string matricula,
         string senha
     )
     {
         UsuarioDTO user = new UsuarioDTO();
-        user.Nome = nome;
+        user.Matricula = matricula;
         user.Senha = senha;
     var result = await client.PostAsJsonAsync("user/Login", user);
 

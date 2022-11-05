@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "OMIqxSxls3C1eniKtH2grehKz28Ytymp7BfgP889W78=",
+  "Hash": "923ESFhpXXunzOjNx9/N8aifvQY/Hjr8iopqdBcb7vc=",
   "Source": "front",
   "BasePath": "_content/front",
   "Mode": "Default",
@@ -78,6 +78,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\Style.css"
+    },
+    {
+      "Identity": "C:\\Users\\Aluno\\Documents\\GitHub\\site_tcc\\front\\wwwroot\\css\\StyleInicio.css",
+      "SourceId": "front",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Aluno\\Documents\\GitHub\\site_tcc\\front\\wwwroot\\",
+      "BasePath": "_content/front",
+      "RelativePath": "css/StyleInicio.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\StyleInicio.css"
     },
     {
       "Identity": "C:\\Users\\Aluno\\Documents\\GitHub\\site_tcc\\front\\wwwroot\\favicon.ico",
