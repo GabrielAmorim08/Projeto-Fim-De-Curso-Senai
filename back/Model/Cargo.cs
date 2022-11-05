@@ -7,6 +7,7 @@ namespace back.Model
     {
         public int Id { get; set; }
         public int? CargoId { get; set; }
+        public string? Cargo1 { get; set; }
 
         public virtual Usuario? CargoNavigation { get; set; }
     }

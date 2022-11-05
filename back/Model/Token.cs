@@ -7,7 +7,7 @@ namespace back.Model
     {
         public int Id { get; set; }
         public int? UserId { get; set; }
-        public string Valor { get; set; } = null!;
+        public string Value { get; set; } = null!;
 
         public virtual Usuario? User { get; set; }
     }

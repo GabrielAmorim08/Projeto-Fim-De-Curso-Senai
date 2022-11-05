@@ -26,7 +26,7 @@ public class UserService
         user.Email = email;
         user.Senha = senha;
         user.Confsenha = confsenha;
-        var result = await client.PostAsJsonAsync("user/register", user);
+        var result = await client.PostAsJsonAsync("user/Register", user);
 
     }
 
@@ -38,7 +38,7 @@ public class UserService
         UsuarioDTO user = new UsuarioDTO();
         user.Nome = nome;
         user.Senha = senha;
-    var result = await client.PostAsJsonAsync("user/login", user);
+    var result = await client.PostAsJsonAsync("user/Login", user);
 
     if (result.StatusCode != HttpStatusCode.OK)
     {

@@ -4,7 +4,7 @@ using front.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
-string server = "https://localhost:7073";
+string server = "https://localhost:7266";
 // Add services to the container.
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();

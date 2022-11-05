@@ -7,8 +7,8 @@ namespace back.Model
     {
         public int Id { get; set; }
         public int? UserId { get; set; }
-        public DateTime Moment { get; set; }
-        public string Content { get; set; } = null!;
+        public DateTime Momento { get; set; }
+        public string Conteudo { get; set; } = null!;
 
         public virtual Usuario? User { get; set; }
     }

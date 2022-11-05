@@ -21,10 +21,16 @@
         public async void CriarConta()
         {
         await service.Register(
-            this.nome, 
-            this.email,
-            this.senha, 
-            this.confsenha);
+        this.nome, 
+        this.email,
+        this.senha, 
+        this.confsenha);
+
+        this.nome = "";
+        this.email = "";
+        this.senha = "";
+        this.confsenha = "";
+        this.StateHasChanged();    
         }
 
 }

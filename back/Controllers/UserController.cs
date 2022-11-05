@@ -6,10 +6,10 @@ using back.Model;
 [Route("user")]
 public class UserController : ControllerBase
 {
-    [HttpPost("register")]
+    [HttpPost("Register")]
     public IActionResult register([FromBody] UsuarioDTO user)
     {
-        using tcc_siteContext context = new tcc_siteContext();
+        using siteContext context = new siteContext();
         List<string> errors = new List<string>();
         if (user.Nome == null)
         {
@@ -49,7 +49,7 @@ public class UserController : ControllerBase
     [HttpPost("Login")]
     public IActionResult Login([FromBody]UsuarioDTO user)
     {
-        using tcc_siteContext context = new tcc_siteContext();
+        using siteContext context = new siteContext();
         var possibleUser = context.Usuarios.FirstOrDefault( u => u.Nome == user.Nome);
 
         if(possibleUser == null)
