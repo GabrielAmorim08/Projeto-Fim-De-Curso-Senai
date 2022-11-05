@@ -62,3 +62,12 @@ C:\Users\gabri\OneDrive\Área de Trabalho\Site\back\obj\Debug\net6.0\refint\back
 C:\Users\gabri\OneDrive\Área de Trabalho\Site\back\obj\Debug\net6.0\back.pdb
 C:\Users\gabri\OneDrive\Área de Trabalho\Site\back\obj\Debug\net6.0\back.genruntimeconfig.cache
 C:\Users\gabri\OneDrive\Área de Trabalho\Site\back\obj\Debug\net6.0\ref\back.dll
+C:\Users\Aluno\Documents\GitHub\site_tcc\back\obj\Debug\net6.0\back.csproj.AssemblyReference.cache
+C:\Users\Aluno\Documents\GitHub\site_tcc\back\obj\Debug\net6.0\back.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Aluno\Documents\GitHub\site_tcc\back\obj\Debug\net6.0\back.AssemblyInfoInputs.cache
+C:\Users\Aluno\Documents\GitHub\site_tcc\back\obj\Debug\net6.0\back.AssemblyInfo.cs
+C:\Users\Aluno\Documents\GitHub\site_tcc\back\obj\Debug\net6.0\back.csproj.CoreCompileInputs.cache
+C:\Users\Aluno\Documents\GitHub\site_tcc\back\obj\Debug\net6.0\back.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Aluno\Documents\GitHub\site_tcc\back\obj\Debug\net6.0\back.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Aluno\Documents\GitHub\site_tcc\back\obj\Debug\net6.0\back.dll
+C:\Users\Aluno\Documents\GitHub\site_tcc\back\obj\Debug\net6.0\back.pdb
