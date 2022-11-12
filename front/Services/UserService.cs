@@ -40,7 +40,7 @@ public class UserService
         UsuarioDTO user = new UsuarioDTO();
         user.Matricula = matricula;
         user.Senha = senha;
-    var result = await client.PostAsJsonAsync("user/Login", user);
+        var result = await client.PostAsJsonAsync("user/Login", user);
 
     if (result.StatusCode != HttpStatusCode.OK)
     {

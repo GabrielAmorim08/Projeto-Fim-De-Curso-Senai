@@ -6,6 +6,8 @@
 @inject UserService service 
 @inject IJSRuntime js
 
+
+
     <!-- Div para o login-->
     <div class="container">   
       <div class="forms-container">
@@ -73,7 +75,7 @@
               Cadastrar
             </button>
           </div>
-          <img src="img/log.svg" class="image" alt="" />
+          <img src="imagem/log.svg" class="image" alt="" />
         </div>
         <div class="panel right-panel">
           <div class="content">
@@ -85,7 +87,7 @@
               Entrar
             </button>
           </div>
-          <img src="img/register.svg" class="image" alt="" />
+          <img src="imagem/register.svg" class="image" alt="" />
         </div>
       </div>
     </div>
@@ -105,7 +107,6 @@
         this.email,
         this.senha, 
         this.confsenha);
-
         this.matricula = "";
         this.nome = "";
         this.email = "";
@@ -125,8 +126,10 @@
             StateHasChanged();
             return;
         }
+        await storage.SetAsync("nome", result);
         await storage.SetAsync("token", result);
         nav.NavigateTo("/inicio");
+      
     }
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {

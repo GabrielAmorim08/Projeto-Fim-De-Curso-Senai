@@ -94,7 +94,6 @@ C:\Users\Aluno\Documents\GitHub\site_tcc\front\obj\Debug\net6.0\front.RazorAssem
 C:\Users\Aluno\Documents\GitHub\site_tcc\front\obj\Debug\net6.0\front.RazorAssemblyInfo.cs
 C:\Users\Aluno\Documents\GitHub\site_tcc\front\obj\Debug\net6.0\staticwebassets.build.json
 C:\Users\Aluno\Documents\GitHub\site_tcc\front\obj\Debug\net6.0\staticwebassets.development.json
-C:\Users\Aluno\Documents\GitHub\site_tcc\front\obj\Debug\net6.0\scopedcss\Shared\MainLayout.razor.rz.scp.css
 C:\Users\Aluno\Documents\GitHub\site_tcc\front\obj\Debug\net6.0\scopedcss\Shared\NavMenu.razor.rz.scp.css
 C:\Users\Aluno\Documents\GitHub\site_tcc\front\obj\Debug\net6.0\scopedcss\bundle\front.styles.css
 C:\Users\Aluno\Documents\GitHub\site_tcc\front\obj\Debug\net6.0\scopedcss\projectbundle\front.bundle.scp.css

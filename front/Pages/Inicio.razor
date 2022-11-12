@@ -1,29 +1,51 @@
 @page "/inicio"
 @using Services;
 @inject UserService service
-
-
-    <p>@nomeinicio</p>
-    <input type="checkbox" id="chec">
-    <label for="chec">
-
-    </label>
-<nav>
-    <ul>
-        <li>
-        <input type="submit" value="Perfil" class="btn" onclick ="/"/>
-        <input type="submit" value="Atividades" class="btn" onclick ="/"/>
-        <input type="submit" value="Calendario" class="btn" onclick ="/"/>
-        </li>
-    </ul>
-</nav>
+@using Microsoft.AspNetCore.Components.Server.ProtectedBrowserStorage
+@inject ProtectedSessionStorage storage
+<div class="container_ini">
+    <div class="left">
+        <ul>
+            <li><a class="active" href="/inicio">Inicio</a></li>
+            <li><a href="/perfil">Perfil</a></li>
+            <li><a href="/atividades">Atividades</a></li>
+            <li><a href="/calendario">Calendario</a></li>
+        </ul>
+    </div>
+    <h1>Seja bem vindo</h1>
+</div>
+<!--
+<footer class="footer">
+        <div class="footer_container">
+            <div class="footer_top">
+                <div class="company_info">
+                    <h2 class="company_logo">ServicesADM</h2>
+                    <p class="company_discription">Sistema web criado afins de aumentar a organização de atividades empresariais</p>
+                    <ul class="footer_ul">
+                        <li class="footer_li">
+                            <a href="#" class="footer_list-link">
+                                <i class="ri-facebook-circle-line"> <img src="imagem/facebook.png"></i>
+                            </a>
+                        </li>  
+                    </ul>
+                    <span class="copyright">...</span>
+                </div>
+                <div>
+                    <h6 class = "footer_title">Microsoft Store</h6>
+                    <ul class="footer_list">
+                        <li class="footer_list-item">
+                            <a href="" class="footer)list0link">About</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+</footer> -->
 
 @code
-{
-    private string nomeinicio = "Seja bem vindo";
+{   
+    private string Mensagem = "";
+    private string nome;
 
-    public async void mostrarnome()
-    {
-        nomeinicio = "seja bem vindo ";
-    }
 }
+

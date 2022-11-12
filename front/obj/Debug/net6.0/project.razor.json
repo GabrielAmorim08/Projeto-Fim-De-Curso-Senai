@@ -45,35 +45,68 @@
         }
       },
       {
-        "HashCode": 52305905,
+        "HashCode": -1349292799,
         "Kind": "Components.Component",
-        "Name": "front.Pages.LoginCadastro",
+        "Name": "front.Pages.Atividades",
         "AssemblyName": "front",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "LoginCadastro"
+            "TagName": "Atividades"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "front.Pages.LoginCadastro"
+          "Common.TypeName": "front.Pages.Atividades"
         }
       },
       {
-        "HashCode": -284093231,
+        "HashCode": 660248936,
         "Kind": "Components.Component",
-        "Name": "front.Pages.LoginCadastro",
+        "Name": "front.Pages.Atividades",
         "AssemblyName": "front",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "front.Pages.LoginCadastro"
+            "TagName": "front.Pages.Atividades"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "front.Pages.LoginCadastro",
+          "Common.TypeName": "front.Pages.Atividades",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": -1105691512,
+        "Kind": "Components.Component",
+        "Name": "front.Pages.Calendario",
+        "AssemblyName": "front",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Calendario"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "front.Pages.Calendario"
+        }
+      },
+      {
+        "HashCode": 1362930082,
+        "Kind": "Components.Component",
+        "Name": "front.Pages.Calendario",
+        "AssemblyName": "front",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "front.Pages.Calendario"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "front.Pages.Calendario",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -107,6 +140,105 @@
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
           "Common.TypeName": "front.Pages.Inicio",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": -861913221,
+        "Kind": "Components.Component",
+        "Name": "front.Pages.Perfil",
+        "AssemblyName": "front",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Perfil"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "front.Pages.Perfil"
+        }
+      },
+      {
+        "HashCode": 442915985,
+        "Kind": "Components.Component",
+        "Name": "front.Pages.Perfil",
+        "AssemblyName": "front",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "front.Pages.Perfil"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "front.Pages.Perfil",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": 52305905,
+        "Kind": "Components.Component",
+        "Name": "front.Pages.LoginCadastro",
+        "AssemblyName": "front",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "LoginCadastro"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "front.Pages.LoginCadastro"
+        }
+      },
+      {
+        "HashCode": -284093231,
+        "Kind": "Components.Component",
+        "Name": "front.Pages.LoginCadastro",
+        "AssemblyName": "front",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "front.Pages.LoginCadastro"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "front.Pages.LoginCadastro",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": -1445411461,
+        "Kind": "Components.Component",
+        "Name": "front.App",
+        "AssemblyName": "front",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "App"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "front.App"
+        }
+      },
+      {
+        "HashCode": 558669938,
+        "Kind": "Components.Component",
+        "Name": "front.App",
+        "AssemblyName": "front",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "front.App"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "front.App",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -207,6 +339,39 @@
         }
       },
       {
+        "HashCode": 630530492,
+        "Kind": "Components.Component",
+        "Name": "front.Shared.NavMenu",
+        "AssemblyName": "front",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "NavMenu"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "front.Shared.NavMenu"
+        }
+      },
+      {
+        "HashCode": 1485696542,
+        "Kind": "Components.Component",
+        "Name": "front.Shared.NavMenu",
+        "AssemblyName": "front",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "front.Shared.NavMenu"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "front.Shared.NavMenu",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
         "HashCode": 66659595,
         "Kind": "Components.Component",
         "Name": "front.Shared.SurveyPrompt",
@@ -256,72 +421,6 @@
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
           "Common.TypeName": "front.Shared.SurveyPrompt",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": 630530492,
-        "Kind": "Components.Component",
-        "Name": "front.Shared.NavMenu",
-        "AssemblyName": "front",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "NavMenu"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "front.Shared.NavMenu"
-        }
-      },
-      {
-        "HashCode": 1485696542,
-        "Kind": "Components.Component",
-        "Name": "front.Shared.NavMenu",
-        "AssemblyName": "front",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "front.Shared.NavMenu"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "front.Shared.NavMenu",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": -1445411461,
-        "Kind": "Components.Component",
-        "Name": "front.App",
-        "AssemblyName": "front",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "App"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "front.App"
-        }
-      },
-      {
-        "HashCode": 558669938,
-        "Kind": "Components.Component",
-        "Name": "front.App",
-        "AssemblyName": "front",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "front.App"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "front.App",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -16612,6 +16711,16 @@
   "RootNamespace": "front",
   "Documents": [
     {
+      "FilePath": "c:\\Users\\Aluno\\Documents\\GitHub\\site_tcc\\front\\Pages\\Calendario.razor",
+      "TargetPath": "Pages\\Calendario.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "c:\\Users\\Aluno\\Documents\\GitHub\\site_tcc\\front\\Pages\\Atividades.razor",
+      "TargetPath": "Pages\\Atividades.razor",
+      "FileKind": "component"
+    },
+    {
       "FilePath": "c:\\Users\\Aluno\\Documents\\GitHub\\site_tcc\\front\\Shared\\MainLayout.razor",
       "TargetPath": "Shared\\MainLayout.razor",
       "FileKind": "component"
@@ -16629,6 +16738,11 @@
     {
       "FilePath": "c:\\Users\\Aluno\\Documents\\GitHub\\site_tcc\\front\\Pages\\LoginCadastro.razor",
       "TargetPath": "Pages\\LoginCadastro.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "c:\\Users\\Aluno\\Documents\\GitHub\\site_tcc\\front\\Pages\\Perfil.razor",
+      "TargetPath": "Pages\\Perfil.razor",
       "FileKind": "component"
     },
     {
