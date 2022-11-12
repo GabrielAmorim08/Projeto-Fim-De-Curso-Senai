@@ -4,13 +4,13 @@ using Microsoft.EntityFrameworkCore;
 
 namespace back.Model;
 
-public partial class tcc_SiteContext : DbContext
+public partial class TccSiteContext : DbContext
 {
-    public tcc_SiteContext()
+    public TccSiteContext()
     {
     }
 
-    public tcc_SiteContext(DbContextOptions<tcc_SiteContext> options)
+    public TccSiteContext(DbContextOptions<TccSiteContext> options)
         : base(options)
     {
     }
@@ -25,13 +25,13 @@ public partial class tcc_SiteContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlServer("Data Source=CLAUDIAAMORIM\\SQLEXPRESS;Initial Catalog=tcc_site;Integrated Security=True;MultipleActiveResultSets=True;TrustServerCertificate=True");
+        => optionsBuilder.UseSqlServer("Data Source=SNCCH01LABF106\\SQLEXPRESS;Initial Catalog=tcc_site;Integrated Security=True;MultipleActiveResultSets=True;TrustServerCertificate=True");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Cargo>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__cargos__3214EC275F588C60");
+            entity.HasKey(e => e.Id).HasName("PK__cargos__3214EC27B8068F33");
 
             entity.ToTable("cargos");
 
@@ -45,7 +45,7 @@ public partial class tcc_SiteContext : DbContext
 
         modelBuilder.Entity<PostAtividade>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__PostAtiv__3214EC27E9870A1D");
+            entity.HasKey(e => e.Id).HasName("PK__PostAtiv__3214EC2769EE5015");
 
             entity.ToTable("PostAtividade");
 
@@ -61,7 +61,7 @@ public partial class tcc_SiteContext : DbContext
 
         modelBuilder.Entity<Token>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Token__3214EC273E74668B");
+            entity.HasKey(e => e.Id).HasName("PK__Token__3214EC275C2E7FF9");
 
             entity.ToTable("Token");
 
@@ -77,7 +77,7 @@ public partial class tcc_SiteContext : DbContext
 
         modelBuilder.Entity<Usuario>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Usuario__3214EC27460FE63C");
+            entity.HasKey(e => e.Id).HasName("PK__Usuario__3214EC27E2DA5696");
 
             entity.ToTable("Usuario");
 

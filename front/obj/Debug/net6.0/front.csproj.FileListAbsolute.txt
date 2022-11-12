@@ -217,3 +217,17 @@ C:\Users\gabri\OneDrive\Área de Trabalho\tcc_blazor\site_tcc\front\obj\Debug\ne
 C:\Users\gabri\OneDrive\Área de Trabalho\tcc_blazor\site_tcc\front\obj\Debug\net6.0\front.pdb
 C:\Users\gabri\OneDrive\Área de Trabalho\tcc_blazor\site_tcc\front\obj\Debug\net6.0\front.genruntimeconfig.cache
 C:\Users\gabri\OneDrive\Área de Trabalho\tcc_blazor\site_tcc\front\obj\Debug\net6.0\ref\front.dll
+C:\Users\Aluno\Documents\GitHub\site_tcc\front\bin\Debug\net6.0\Azure.Core.dll
+C:\Users\Aluno\Documents\GitHub\site_tcc\front\bin\Debug\net6.0\Azure.Identity.dll
+C:\Users\Aluno\Documents\GitHub\site_tcc\front\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Aluno\Documents\GitHub\site_tcc\front\bin\Debug\net6.0\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\Aluno\Documents\GitHub\site_tcc\front\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\Aluno\Documents\GitHub\site_tcc\front\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Aluno\Documents\GitHub\site_tcc\front\bin\Debug\net6.0\Microsoft.Extensions.Logging.dll
+C:\Users\Aluno\Documents\GitHub\site_tcc\front\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\Aluno\Documents\GitHub\site_tcc\front\bin\Debug\net6.0\Microsoft.Extensions.Options.dll
+C:\Users\Aluno\Documents\GitHub\site_tcc\front\bin\Debug\net6.0\Microsoft.Extensions.Primitives.dll
+C:\Users\Aluno\Documents\GitHub\site_tcc\front\bin\Debug\net6.0\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\Aluno\Documents\GitHub\site_tcc\front\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\Aluno\Documents\GitHub\site_tcc\front\bin\Debug\net6.0\Microsoft.SqlServer.Server.dll
+C:\Users\Aluno\Documents\GitHub\site_tcc\front\bin\Debug\net6.0\System.Memory.Data.dll

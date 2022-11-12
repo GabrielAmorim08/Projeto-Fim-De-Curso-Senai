@@ -20,7 +20,7 @@ public class TokenService
         token.UserId = user.Id;
         token.Valor = str;
 
-        using tcc_SiteContext context = new tcc_SiteContext();
+        using TccSiteContext context = new TccSiteContext();
         context.Tokens.Add(token);
         await context.SaveChangesAsync();
 
@@ -60,7 +60,7 @@ public class TokenService
 
     public Usuario TokenValidation(string value)
     {
-        using tcc_SiteContext context = new tcc_SiteContext();
+        using TccSiteContext context = new TccSiteContext();
         var token = context.Tokens.FirstOrDefault(
             t => t.Valor == value);
         

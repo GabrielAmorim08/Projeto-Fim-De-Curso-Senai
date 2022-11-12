@@ -12,5 +12,4 @@ public partial class Token
     public string Valor { get; set; } = null!;
 
     public virtual Usuario? User { get; set; }
-
 }

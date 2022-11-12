@@ -190,3 +190,23 @@ C:\Users\gabri\OneDrive\Área de Trabalho\tcc_blazor\site_tcc\back\obj\Debug\net
 C:\Users\gabri\OneDrive\Área de Trabalho\tcc_blazor\site_tcc\back\obj\Debug\net6.0\staticwebassets.build.json
 C:\Users\gabri\OneDrive\Área de Trabalho\tcc_blazor\site_tcc\back\obj\Debug\net6.0\staticwebassets.development.json
 C:\Users\gabri\OneDrive\Área de Trabalho\tcc_blazor\site_tcc\back\obj\Debug\net6.0\scopedcss\bundle\back.styles.css
+C:\Users\Aluno\Documents\GitHub\site_tcc\back\bin\Debug\net6.0\Azure.Core.dll
+C:\Users\Aluno\Documents\GitHub\site_tcc\back\bin\Debug\net6.0\Azure.Identity.dll
+C:\Users\Aluno\Documents\GitHub\site_tcc\back\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Aluno\Documents\GitHub\site_tcc\back\bin\Debug\net6.0\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\Aluno\Documents\GitHub\site_tcc\back\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\Aluno\Documents\GitHub\site_tcc\back\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Aluno\Documents\GitHub\site_tcc\back\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\Aluno\Documents\GitHub\site_tcc\back\bin\Debug\net6.0\Microsoft.Extensions.Logging.dll
+C:\Users\Aluno\Documents\GitHub\site_tcc\back\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\Aluno\Documents\GitHub\site_tcc\back\bin\Debug\net6.0\Microsoft.Extensions.Options.dll
+C:\Users\Aluno\Documents\GitHub\site_tcc\back\bin\Debug\net6.0\Microsoft.Extensions.Primitives.dll
+C:\Users\Aluno\Documents\GitHub\site_tcc\back\bin\Debug\net6.0\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\Aluno\Documents\GitHub\site_tcc\back\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\Aluno\Documents\GitHub\site_tcc\back\bin\Debug\net6.0\Microsoft.SqlServer.Server.dll
+C:\Users\Aluno\Documents\GitHub\site_tcc\back\bin\Debug\net6.0\Mono.TextTemplating.dll
+C:\Users\Aluno\Documents\GitHub\site_tcc\back\bin\Debug\net6.0\System.CodeDom.dll
+C:\Users\Aluno\Documents\GitHub\site_tcc\back\bin\Debug\net6.0\System.Memory.Data.dll
+C:\Users\Aluno\Documents\GitHub\site_tcc\back\bin\Debug\net6.0\System.Text.Encodings.Web.dll
+C:\Users\Aluno\Documents\GitHub\site_tcc\back\bin\Debug\net6.0\System.Text.Json.dll
+C:\Users\Aluno\Documents\GitHub\site_tcc\back\bin\Debug\net6.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll

@@ -13,7 +13,7 @@ public class UserController : ControllerBase
     [HttpPost("Register")]
     public IActionResult register([FromBody] UsuarioDTO user)
     {
-        using tcc_SiteContext context = new tcc_SiteContext();
+        using TccSiteContext context = new TccSiteContext();
         List<string> errors = new List<string>();
         if (user.Nome == null)
         {
@@ -54,7 +54,7 @@ public class UserController : ControllerBase
     [HttpPost("Login")]
     public async Task<IActionResult> Login([FromBody]UsuarioDTO user, [FromServices]TokenService service)
     {
-        using tcc_SiteContext context = new tcc_SiteContext();
+        using TccSiteContext context = new TccSiteContext();
         var possibleUser = context.Usuarios.FirstOrDefault( u => u.Matricula == user.Matricula);
 
         if(possibleUser == null)
