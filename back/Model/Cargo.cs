@@ -1,14 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace back.Model
-{
-    public partial class Cargo
-    {
-        public int Id { get; set; }
-        public int? CargoId { get; set; }
-        public string? Cargo1 { get; set; }
+namespace back.Model;
 
-        public virtual Usuario? CargoNavigation { get; set; }
-    }
+public partial class Cargo
+{
+    public int Id { get; set; }
+
+    public int? CargoId { get; set; }
+
+    public virtual Usuario? CargoNavigation { get; set; }
 }

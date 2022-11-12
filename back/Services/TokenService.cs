@@ -1,8 +1,6 @@
-using System;
-
 namespace back.Services;
-
-using Model;
+using System;
+using back.Model;
 
 public class TokenService
 {
@@ -20,9 +18,9 @@ public class TokenService
         Token token = new Token();
 
         token.UserId = user.Id;
-        token.Value = str;
+        token.Valor = str;
 
-        using tcc_siteContext context = new tcc_siteContext();
+        using tcc_SiteContext context = new tcc_SiteContext();
         context.Tokens.Add(token);
         await context.SaveChangesAsync();
 
@@ -62,9 +60,9 @@ public class TokenService
 
     public Usuario TokenValidation(string value)
     {
-        using tcc_siteContext context = new tcc_siteContext();
+        using tcc_SiteContext context = new tcc_SiteContext();
         var token = context.Tokens.FirstOrDefault(
-            t => t.Value == value);
+            t => t.Valor == value);
         
         if (token == null)
             return null;

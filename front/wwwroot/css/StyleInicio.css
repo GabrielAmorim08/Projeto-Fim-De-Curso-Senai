@@ -1,8 +1,29 @@
 
-div.iniciocontainer
+*
 {
-    display: flex;
-    flex-direction: auto;
-    background-color: #fa50d8;
+    padding: 0px;
+    margin: 0px;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
 
+ul{
+    list-style: none;
+    display: block;
+}
+
+nav
+{
+    background-color: white;
+    width: 200px;
+    height: 100%;
+    left: -350px;
+    position: absolute;
+}
+
+input[type = "checkbox"]:checked ~ nav
+{
+    transform: translateX(350px);
 }

@@ -114,12 +114,6 @@ div.formulario {
   font-size: 1rem;
 }
 
-/*Estilizando o botão e icone do Gmail */
-.social-media {
-  display: flex;
-  justify-content: center;
-}
-
 .social-icon {
   height: 46px;
   width: 46px;

@@ -1,14 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace back.Model
-{
-    public partial class Token
-    {
-        public int Id { get; set; }
-        public int? UserId { get; set; }
-        public string Value { get; set; } = null!;
+namespace back.Model;
 
-        public virtual Usuario? User { get; set; }
-    }
+public partial class Token
+{
+    public int Id { get; set; }
+
+    public int? UserId { get; set; }
+
+    public string Valor { get; set; } = null!;
+
+    public virtual Usuario? User { get; set; }
+
 }

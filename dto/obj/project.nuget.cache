@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "XHjfj4kNyvE6TGdhZoNydMn3wABpynt+ueLIiePRP0QaAMfjpr13W+8izkpMAgOrm+8zWplEmsvtNHoH1qzk5g==",
+  "dgSpecHash": "Hrs4yNaNuYfqc7QZliQwI6mPj34H9MtZMA2Hrs72T7aF7KBo2GgvZO+i95MzxXnjIRcstY5AXZrlJNHLP24Z9Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Aluno\\Documents\\GitHub\\site_tcc\\dto\\dto.csproj",
+  "projectFilePath": "C:\\Users\\gabri\\OneDrive\\Área de Trabalho\\tcc_blazor\\site_tcc\\dto\\dto.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
