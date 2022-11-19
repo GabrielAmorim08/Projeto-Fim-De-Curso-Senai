@@ -73,7 +73,7 @@ public class UserController : ControllerBase
 
         UserInfoToken info = new UserInfoToken();
         info.Name = user.Nome;
-        info.Matricula = possibleUser.Id;
+        info.Matricula = possibleUser.Matricula;
         var token = jwt.GetToken(info);
 
         return Ok(token);
@@ -85,7 +85,7 @@ public class UserController : ControllerBase
         try
         {
             var info = jwt.Validate<UserInfoToken>(token);
-            int matricula = info.Matricula;
+            string matricula = info.Matricula;
 
             using TccSiteContext context = new TccSiteContext();
             var user = await context.Usuarios.FindAsync(matricula);

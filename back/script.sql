@@ -14,7 +14,7 @@ create table Usuario(
 	email varchar(30) not null,
 	senha varchar(MAX) not null,
 	confsenha varchar(MAX) not null,
-	matricula varchar(10)
+	matricula varchar(10) not null
 );
 create table Token(
 	ID int identity primary key,

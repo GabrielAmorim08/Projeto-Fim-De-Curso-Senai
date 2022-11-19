@@ -2,7 +2,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\dto\dto.csproj" />
-    <ProjectReference Include="..\back\back.csproj" />
   </ItemGroup>
 
   <PropertyGroup>
