@@ -5,6 +5,8 @@ namespace back.Controllers;
 
 using back.Services;
 using Model;
+using Trevisharp.Security.Jwt;
+using Trevisharp.Security.Jwt.Exceptions;
 
 [ApiController]
 [Route("user")]
@@ -51,11 +53,14 @@ public class UserController : ControllerBase
         context.SaveChanges();
         return Ok("Usuario cadastrado com sucesso");
     }
+    
     [HttpPost("Login")]
-    public async Task<IActionResult> Login([FromBody]UsuarioDTO user, [FromServices]TokenService service)
+    public async Task<IActionResult> Login([FromBody]UsuarioDTO user,
+        [FromServices]CryptoService jwt)
     {
         using TccSiteContext context = new TccSiteContext();
-        var possibleUser = context.Usuarios.FirstOrDefault( u => u.Matricula == user.Matricula);
+        var possibleUser = context.Usuarios
+            .FirstOrDefault( u => u.Matricula == user.Matricula);
 
         if(possibleUser == null)
         {
@@ -65,13 +70,61 @@ public class UserController : ControllerBase
         {
             return BadRequest("Senha inválida");
         }
-        var token = await service.CreateToken(possibleUser);
-        return Ok(token.Valor);
+
+        UserInfoToken info = new UserInfoToken();
+        info.Name = user.Nome;
+        info.Matricula = possibleUser.Id;
+        var token = jwt.GetToken(info);
+
+        return Ok(token);
+    }
+    
+    [HttpGet("GetUserInfo/{token}")]
+    public async Task<IActionResult> GetUserInfo(string token, [FromServices]CryptoService jwt)
+    {
+        try
+        {
+            var info = jwt.Validate<UserInfoToken>(token);
+            int matricula = info.Matricula;
+
+            using TccSiteContext context = new TccSiteContext();
+            var user = await context.Usuarios.FindAsync(matricula);
+
+            if (user == null)
+                return Ok(new {
+                    Status = "Error",
+                    Message = "Usuário Inexistente."
+                });
+
+            UsuarioDTO userData = new UsuarioDTO();
+            user.Matricula = matricula;
+            userData.Nome = user.Nome;
+            // TODO ...
+
+            return Ok(userData);
+        }
+        catch (Exception e) when (
+            e is JwtInvalidFormatException || 
+            e is JwtInvalidPayloadException || 
+            e is JwtInvalidSignatureException)
+        {
+            return Ok(new {
+                Status = "Error",
+                Message = "Token inválido."
+            });
+        }
+        catch (Exception e)
+        {
+            return Ok(new {
+                Status = "Error",
+                Message = "Erro interno no servidor."
+            });
+        }
     }
 
     [HttpPost("Update")]
-        public IActionResult UpdateName()
-        {
-            throw new NotImplementedException();
-        }
+    public IActionResult UpdateName()
+    {
+        throw new NotImplementedException();
+    }
 }

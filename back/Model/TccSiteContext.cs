@@ -31,7 +31,7 @@ public partial class TccSiteContext : DbContext
     {
         modelBuilder.Entity<Cargo>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__cargos__3214EC27B8068F33");
+            entity.HasKey(e => e.Id).HasName("PK__cargos__3214EC27380A7133");
 
             entity.ToTable("cargos");
 
@@ -45,7 +45,7 @@ public partial class TccSiteContext : DbContext
 
         modelBuilder.Entity<PostAtividade>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__PostAtiv__3214EC2769EE5015");
+            entity.HasKey(e => e.Id).HasName("PK__PostAtiv__3214EC272133C6EE");
 
             entity.ToTable("PostAtividade");
 
@@ -61,7 +61,7 @@ public partial class TccSiteContext : DbContext
 
         modelBuilder.Entity<Token>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Token__3214EC275C2E7FF9");
+            entity.HasKey(e => e.Id).HasName("PK__Token__3214EC27D8965828");
 
             entity.ToTable("Token");
 
@@ -77,7 +77,7 @@ public partial class TccSiteContext : DbContext
 
         modelBuilder.Entity<Usuario>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Usuario__3214EC27E2DA5696");
+            entity.HasKey(e => e.Id).HasName("PK__Usuario__3214EC277B8E88D2");
 
             entity.ToTable("Usuario");
 

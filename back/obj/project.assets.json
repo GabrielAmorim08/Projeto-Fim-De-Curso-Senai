@@ -1231,6 +1231,18 @@
           }
         }
       },
+      "Trevisharp.Security.Jwt/1.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Swashbuckle.AspNetCore": "6.2.3"
+        },
+        "compile": {
+          "lib/net6.0/Trevisharp.Security.Jwt.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/Trevisharp.Security.Jwt.dll": {}
+        }
+      },
       "dto/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -3686,6 +3698,18 @@
         "version.txt"
       ]
     },
+    "Trevisharp.Security.Jwt/1.0.0": {
+      "sha512": "JMcdAjQpLl1TAYN+8owQ07SVlVSDvlVwAalCuilPviZJFoaPaFpCxIjV20mi1IZya3tQC2AgfpCXWNDbG9esLA==",
+      "type": "package",
+      "path": "trevisharp.security.jwt/1.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net6.0/Trevisharp.Security.Jwt.dll",
+        "trevisharp.security.jwt.1.0.0.nupkg.sha512",
+        "trevisharp.security.jwt.nuspec"
+      ]
+    },
     "dto/1.0.0": {
       "type": "project",
       "path": "../dto/dto.csproj",
@@ -3697,23 +3721,29 @@
       "Microsoft.EntityFrameworkCore.Design >= 7.0.0",
       "Microsoft.EntityFrameworkCore.SqlServer >= 7.0.0",
       "Swashbuckle.AspNetCore >= 6.2.3",
+      "Trevisharp.Security.Jwt >= 1.0.0",
       "dto >= 1.0.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\gabri\\.nuget\\packages\\": {}
+    "C:\\Users\\Aluno\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\gabri\\OneDrive\\Área de Trabalho\\tcc_blazor\\site_tcc\\back\\back.csproj",
+      "projectUniqueName": "C:\\Users\\Aluno\\Documents\\GitHub\\site_tcc\\back\\back.csproj",
       "projectName": "back",
-      "projectPath": "C:\\Users\\gabri\\OneDrive\\Área de Trabalho\\tcc_blazor\\site_tcc\\back\\back.csproj",
-      "packagesPath": "C:\\Users\\gabri\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\gabri\\OneDrive\\Área de Trabalho\\tcc_blazor\\site_tcc\\back\\obj\\",
+      "projectPath": "C:\\Users\\Aluno\\Documents\\GitHub\\site_tcc\\back\\back.csproj",
+      "packagesPath": "C:\\Users\\Aluno\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Aluno\\Documents\\GitHub\\site_tcc\\back\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\gabri\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Aluno\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3728,8 +3758,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\gabri\\OneDrive\\Área de Trabalho\\tcc_blazor\\site_tcc\\dto\\dto.csproj": {
-              "projectPath": "C:\\Users\\gabri\\OneDrive\\Área de Trabalho\\tcc_blazor\\site_tcc\\dto\\dto.csproj"
+            "C:\\Users\\Aluno\\Documents\\GitHub\\site_tcc\\dto\\dto.csproj": {
+              "projectPath": "C:\\Users\\Aluno\\Documents\\GitHub\\site_tcc\\dto\\dto.csproj"
             }
           }
         }
@@ -3757,6 +3787,10 @@
           "Swashbuckle.AspNetCore": {
             "target": "Package",
             "version": "[6.2.3, )"
+          },
+          "Trevisharp.Security.Jwt": {
+            "target": "Package",
+            "version": "[1.0.0, )"
           }
         },
         "imports": [
@@ -3778,7 +3812,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
       }
     }
   }

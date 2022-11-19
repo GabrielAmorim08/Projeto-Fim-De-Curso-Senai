@@ -1,4 +1,5 @@
 using back.Services;
+using Trevisharp.Security.Jwt;
 
 int tokenSize = 32;
 
@@ -13,6 +14,13 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddSingleton<TokenService>(
     provinder => new TokenService(tokenSize));
+
+builder.Services.AddSingleton<CryptoService>(
+    provinder => new CryptoService()
+    {
+        InternalKeySize = 16,
+        UpdatePeriod = TimeSpan.FromDays(1)
+    });
     
 var app = builder.Build();
 
