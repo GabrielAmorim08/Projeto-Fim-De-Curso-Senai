@@ -48,7 +48,6 @@ public class UserController : ControllerBase
         Usuario.Email = user.Email;
         Usuario.Senha = user.Senha;
         Usuario.Confsenha = user.Confsenha;
-
         context.Add(Usuario);
         context.SaveChanges();
         return Ok("Usuario cadastrado com sucesso");
@@ -89,7 +88,7 @@ public class UserController : ControllerBase
             string matricula = info.Matricula;
 
             using TccSiteContext context = new TccSiteContext();
-            var user = await context.Usuarios.FindAsync(matricula);
+            var user = context.Usuarios.FirstOrDefault(u => u.Matricula == matricula);
 
             if (user == null)
                 return Ok(new {
@@ -98,9 +97,9 @@ public class UserController : ControllerBase
                 });
 
             UsuarioDTO userData = new UsuarioDTO();
-            user.Matricula = matricula;
+            userData.Matricula = matricula;
             userData.Nome = user.Nome;
-            user.Email = user.Email;
+            userData.Email = user.Email;
 
             return Ok(userData);
         }
@@ -116,6 +115,7 @@ public class UserController : ControllerBase
         }
         catch (Exception e)
         {
+            Console.WriteLine(e.Message);
             return Ok(new {
                 Status = "Error",
                 Message = "Erro interno no servidor."

@@ -12,15 +12,14 @@
             <li><a class="active" href="/calendario">Calendario</a></li>
         </ul>
     </div>
-</div>
-<h1>Calendario exemplo</h1>
+    <h1>Calendario de atividades</h1>
     <select @onchange="LoadCalender">
         @foreach (string MonthNames in monthNames)
         {
             <option>@MonthNames</option>
         }
     </select>
-    <table style="Block">
+    <table class="tabela_dias">
         <thead>
             <tr>
                 @for(var dayIndex = 0; dayIndex < days.Count(); dayIndex++)
@@ -39,10 +38,10 @@
                     {
                         var wIndex = weekIndex;
                         var dIndex = dayIndex;
-                        <td>
+                        <td class="tabela_calendario">
                             @weeks[weekIndex].Dates[dayIndex].DateValue
                             <br /><br />
-                                <label style="color:#c00; font-weight:bold">@weeks[weekIndex].Dates[dayIndex].Note</label>
+                                <label>@weeks[weekIndex].Dates[dayIndex].Note</label>
                             <br /><br />
                         </td>
                     }
@@ -50,6 +49,7 @@
             }
         </tbody>
     </table>
+</div>
 @code{
     List<string> monthNames = new List<string>();
     List<string> days = new List<string>();

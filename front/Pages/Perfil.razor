@@ -4,7 +4,6 @@
 @inject NavigationManager nav
 @inject ProtectedSessionStorage storage
 @inject UserService service 
-@using dto
 
 <div class="container_ini">
     <div class="left">
@@ -15,23 +14,27 @@
             <li><a href="/calendario">Calendario</a></li>
         </ul>
     </div>
+    <p>@nome</p>
+    <p>@matricula</p>
+    <p>@email</p>
 </div>
-<p>@nome</p>
-<p>@matricula</p>
-<p>@email</p>
 
 @code
 {
     public string nome;
     public string matricula;
     public string email;
-    protected override async Task OnInitializedAsync()
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
     {
-        UsuarioDTO user = new UsuarioDTO();
+
         var token = await storage.GetAsync<string>("token");
-        nome = user.Nome;
-        matricula = user.Matricula;
-        email = user.Email;
+        var user = await service.GetUserInfo(token.Value);
+
+        this.nome = user.Nome;
+        this.matricula = user.Matricula;
+        this.email = user.Email;
         StateHasChanged();
     }
 }
+

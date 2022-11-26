@@ -47,12 +47,13 @@
             <div class="input-field">
               <i class="fas fa-lock"></i>
               <input type="password" placeholder="Senha" @bind-value = "@senha"/>
-            </div>            
+            </div>
             <div class="input-field">
               <i class="fas fa-lock"></i>
               <input type="password" placeholder="Confirmar Senha" @bind-value = "@confsenha"/>
-            </div>  
+            </div> 
             <input type="submit" class="btn" value="Cadastrar" onclick="@CriarConta"/>
+
             <div class="social-media">
             </div>
           </div>
@@ -92,26 +93,35 @@
 @code
 { 
     private string loginError = "";
+    private string mensagem = "";
     private string matricula;
     private string nome;
     private string senha;
     private string confsenha;
     private string email;   
-        public async void CriarConta()
-        {
-        await service.Register(
-        this.matricula,
-        this.nome, 
-        this.email,
-        this.senha, 
-        this.confsenha);
-        this.matricula = "";
-        this.nome = "";
-        this.email = "";
-        this.senha = "";
-        this.confsenha = "";
-        this.StateHasChanged();    
+      public async void CriarConta()
+    {
+      await service.Register(
+      this.matricula,
+      this.nome, 
+      this.email,
+      this.senha, 
+      this.confsenha);
+      if(confsenha != senha)
+      {
+        mensagem = "As senhas não são iguais";
       }
+      else if(confsenha == senha & matricula != null)
+      {
+        mensagem = "Usuario cadastrado com sucesso";
+      }
+      this.matricula = "";
+      this.nome = "";
+      this.email = "";
+      this.senha = "";
+      this.confsenha = "";
+      this.StateHasChanged();    
+    }
     public async void UsuarioLogin()
     {
         var result = await service.Login(

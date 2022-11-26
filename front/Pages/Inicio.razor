@@ -1,8 +1,10 @@
 @page "/inicio"
 @using Services;
-@inject UserService service
 @using Microsoft.AspNetCore.Components.Server.ProtectedBrowserStorage
+@inject NavigationManager nav
 @inject ProtectedSessionStorage storage
+@inject UserService service 
+
 <div class="container_ini">
     <div class="left">
         <ul>
@@ -12,7 +14,8 @@
             <li><a href="/calendario">Calendario</a></li>
         </ul>
     </div>
-    <h1>Seja bem vindo</h1>
+    <br>
+    <h1>Seja bem vindo @Nome</h1>
 </div>
 <!--
 <footer class="footer">
@@ -44,8 +47,17 @@
 
 @code
 {   
-    private string Mensagem = "";
-    private string nome;
+    public string Nome;
+
+     protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+
+        var token = await storage.GetAsync<string>("token");
+        var user = await service.GetUserInfo(token.Value);
+
+        this.Nome = user.Nome;
+        StateHasChanged();
+    }
 
 }
 

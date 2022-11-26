@@ -29,7 +29,6 @@ public class UserService
         user.Senha = senha;
         user.Confsenha = confsenha;
         var result = await client.PostAsJsonAsync("user/Register", user);
-
     }
 
     public async Task<string> Login(
@@ -60,5 +59,4 @@ public class UserService
         }
         return content;
     }
-
 }
