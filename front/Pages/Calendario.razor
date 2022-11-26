@@ -1,14 +1,112 @@
 @page "/calendario"
 @using Services;
-@inject UserService service
+@inject UserService service;
+@using BlazorCalendar
 
-<div class="container_ini">
-    <div class="left">
-        <ul>
-            <li><a href="/inicio">Inicio</a></li>
-            <li><a href="/perfil">Perfil</a></li>
-            <li><a href="/atividades">Atividades</a></li>
-            <li><a class="active" href="/calendario">Calendario</a></li>
-        </ul>
-    </div>
-</div>
+<h1>Calendario exemplo</h1>
+
+    <select @onchange = "LoadCalender">
+        @foreach (string MonthNames in monthNames)
+        {
+            <option>@MonthNames</option>
+        }
+    </select>
+
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                @for(var dayIndex = 0; dayIndex < days.Count(); dayIndex++)
+                {
+                    <th>
+                        @days[dayIndex]
+                    </th>
+                }
+            </tr>
+        </thead>
+        <tbody>
+            @for(var weekIndex = 0; weekIndex < weeks.Count; weekIndex++)
+            {
+                <tr>
+                    @for(var dayIndex = 0; dayIndex< weeks[weekIndex].Dates.Count(); dayIndex++)
+                    {
+                        var wIndex = weekIndex;
+                        var dIndex = dayIndex;
+                        <td>
+                            @weeks[weekIndex].Dates[dayIndex].DateValue
+                            <br /><br />
+                                <label style="color:#c00; font-weight:bold">@weeks[weekIndex].Dates[dayIndex].Note</label>
+                            <br /><br />
+                        </td>
+                    }
+                </tr>
+            }
+        </tbody>
+    </table>
+@code{
+    List<string> monthNames = new List<string>();
+    List<string> days = new List<string>();
+    List<WeekClass> weeks = new List<WeekClass>();
+    DateTime startDate = new DateTime(DateTime.Now.Year, DateTime.Now.Month,1);
+    DateTime endDate = (new DateTime(DateTime.Now.Year, DateTime.Now.Month,1)).AddMonths(1).AddDays(-1);
+
+        protected override void OnInitialized()
+        {
+            monthNames = System.Globalization.CultureInfo.CurrentCulture.DateTimeFormat.MonthGenitiveNames.ToList();
+            GenerateCalendarHead();
+            GenerateCAlendarBody();
+        }
+        private void LoadCalender(ChangeEventArgs e)
+        {
+            var Month = e.Value.ToString();
+            int MonthIndex = DateTime.ParseExact(Month,"MMMM",System.Globalization.CultureInfo.CreateSpecificCulture("en-GB")).Month;
+            startDate = new DateTime(DateTime.Now.Year, MonthIndex,1);
+            endDate = (new DateTime(DateTime.Now.Year, MonthIndex,1)).AddMonths(1).AddDays(-1);
+            GenerateCalendarHead();
+            GenerateCAlendarBody();
+        }
+        private void GenerateCalendarHead()
+        {
+            var day1 = new List<string>();
+                for(var dt = startDate;dt<=endDate;dt = dt.AddDays(1))
+                {
+                    day1.Add(dt.ToString("dddd"));
+                }
+                days = day1.Distinct().ToList();
+        }
+        private void GenerateCAlendarBody()
+        {
+            weeks = new List<WeekClass>();
+            int flag = 0;
+            WeekClass week = new WeekClass();
+            List<DayEvent> dates = new List<DayEvent>();
+            var totalDays = (int)(endDate - startDate).TotalDays;
+            int CountDays = 0;
+            for(var dt = startDate;dt<=endDate; dt = dt.AddDays(1))
+            {
+                flag++;
+                dates.Add(new DayEvent()
+                {
+                    DateValue = dt.ToString("dd-MMM-yyyy"),
+                    DayName = dt.ToString("dddd")
+                });
+                if(flag == 7)
+                {
+                    week = new WeekClass();
+                    week.Dates = dates;
+                    weeks.Add(week);
+                    dates = new List<DayEvent>();
+                    flag  = 0;
+                }
+                if(CountDays == totalDays)
+                {   
+                     week = new WeekClass();
+                    week.Dates = dates;
+                    weeks.Add(week);
+                    break;
+
+                }
+                CountDays++;
+            }    
+        }
+}
+

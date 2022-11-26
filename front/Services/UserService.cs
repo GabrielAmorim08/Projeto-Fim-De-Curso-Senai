@@ -49,15 +49,15 @@ public class UserService
     var token = await result.Content.ReadAsStringAsync();
     return token;
     }
-    public async Task<string> UserInfo(           
-        string matricula,
-        string nome,
-        string email)  
-    {    
-        token
-        user.Matricula = matricula;
+//   public async Task<string> UserInfo(           
+//         string matricula,
+//        string nome,
+//        string email)  
+//    {    
+//         token 
+//         user.Matricula = matricula;
 
-      var result = await client.GetAsync("user/GetUserInfo/{token}", user);
-    }
+//       var result = await client.GetAsync("user/GetUserInfo/{token}", user);
+//     }
 
 }

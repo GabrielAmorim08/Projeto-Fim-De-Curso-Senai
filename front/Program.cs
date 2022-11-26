@@ -2,6 +2,8 @@ using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
 using front.Services;
 
+using Radzen;
+
 var builder = WebApplication.CreateBuilder(args);
 
 string server = "https://localhost:7266";
@@ -9,6 +11,10 @@ string server = "https://localhost:7266";
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 builder.Services.AddSingleton(provinder => new UserService(server));
+        builder.Services.AddScoped<DialogService>();
+        builder.Services.AddScoped<NotificationService>();
+        builder.Services.AddScoped<TooltipService>();
+        builder.Services.AddScoped<ContextMenuService>();
 
 var app = builder.Build();
 
