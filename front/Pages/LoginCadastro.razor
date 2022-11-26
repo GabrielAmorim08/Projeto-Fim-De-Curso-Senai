@@ -6,8 +6,6 @@
 @inject UserService service 
 @inject IJSRuntime js
 
-
-
     <!-- Div para o login-->
     <div class="container">   
       <div class="forms-container">
@@ -126,7 +124,6 @@
             StateHasChanged();
             return;
         }
-        await storage.SetAsync("nome", result);
         await storage.SetAsync("token", result);
         nav.NavigateTo("/inicio");
       

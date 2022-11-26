@@ -42,22 +42,23 @@ public class UserService
         user.Senha = senha;
         var result = await client.PostAsJsonAsync("user/Login", user);
 
-    if (result.StatusCode != HttpStatusCode.OK)
+        if (result.StatusCode != HttpStatusCode.OK)
+        {
+            return null;
+        }
+        var token = await result.Content.ReadAsStringAsync();
+        return token;
+    }
+    public async Task<UsuarioDTO> GetUserInfo(string token)
     {
-        return null;
-    }
-    var token = await result.Content.ReadAsStringAsync();
-    return token;
-    }
-//   public async Task<string> UserInfo(           
-//         string matricula,
-//        string nome,
-//        string email)  
-//    {    
-//         token 
-//         user.Matricula = matricula;
+        var result = await client.GetAsync($"user/GetUserInfo/{token}");
 
-//       var result = await client.GetAsync("user/GetUserInfo/{token}", user);
-//     }
+        var content = await result.Content.ReadFromJsonAsync<UsuarioDTO>();
+        if (content == null)
+        {
+            return null;
+        }
+        return content;
+    }
 
 }

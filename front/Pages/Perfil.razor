@@ -1,6 +1,10 @@
 @page "/perfil"
 @using Services;
-@inject UserService service
+@using Microsoft.AspNetCore.Components.Server.ProtectedBrowserStorage
+@inject NavigationManager nav
+@inject ProtectedSessionStorage storage
+@inject UserService service 
+@using dto
 
 <div class="container_ini">
     <div class="left">
@@ -11,11 +15,23 @@
             <li><a href="/calendario">Calendario</a></li>
         </ul>
     </div>
-    </div>
-    <div class="perfil">
-        <p>hellow</p>
-    </div>
+</div>
+<p>@nome</p>
+<p>@matricula</p>
+<p>@email</p>
+
 @code
 {
-
+    public string nome;
+    public string matricula;
+    public string email;
+    protected override async Task OnInitializedAsync()
+    {
+        UsuarioDTO user = new UsuarioDTO();
+        var token = await storage.GetAsync<string>("token");
+        nome = user.Nome;
+        matricula = user.Matricula;
+        email = user.Email;
+        StateHasChanged();
+    }
 }

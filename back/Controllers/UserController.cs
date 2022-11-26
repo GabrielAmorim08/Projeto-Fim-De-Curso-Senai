@@ -74,6 +74,7 @@ public class UserController : ControllerBase
         UserInfoToken info = new UserInfoToken();
         info.Name = user.Nome;
         info.Matricula = possibleUser.Matricula;
+        info.email = user.Email;
         var token = jwt.GetToken(info);
 
         return Ok(token);
@@ -99,7 +100,7 @@ public class UserController : ControllerBase
             UsuarioDTO userData = new UsuarioDTO();
             user.Matricula = matricula;
             userData.Nome = user.Nome;
-            // TODO ...
+            user.Email = user.Email;
 
             return Ok(userData);
         }
