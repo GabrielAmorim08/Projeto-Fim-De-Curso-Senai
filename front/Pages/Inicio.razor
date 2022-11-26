@@ -51,7 +51,6 @@
 
      protected override async Task OnAfterRenderAsync(bool firstRender)
     {
-
         var token = await storage.GetAsync<string>("token");
         var user = await service.GetUserInfo(token.Value);
 

@@ -16,7 +16,7 @@ create table Usuario(
 	confsenha varchar(MAX) not null,
 	matricula varchar(10) not null,
 	telefone varchar(20),
-	endereço varchar(MAX),
+	endereco varchar(MAX),
 	UF varchar(10),
 	estado varchar(30)
 );
