@@ -1,0 +1,55 @@
+<div class="row">
+    <div class="col-md6">
+        <table>
+            <tr>
+                <td>
+                    <select class="form-control" @bind="Dia">
+                        @for (int i=1;i <= 31;i++)
+                        {
+                            <option>@i</option>
+                        }
+                    </select> 
+                </td>
+                <td>
+                    <select class="form-control" @bind="Mes">
+                        @for (int i = 1; i <= 12; i++)
+                        {
+                            <option value="@i">@Meses[i-1]</option>
+                        }
+                    </select>
+                </td>
+                <td>
+                    <select class="form-control" @bind="Ano">
+                        @for (int i = DateTime.Now.Year-100; i <= DateTime.Now.Year+50;i++ )
+                        {
+                            <option>@i</option>
+                        }
+                    </select>
+                </td>
+                <td>
+                    <button type="button" class="btn btn-info">Selecione a data</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+@code {
+    public int Dia { get; set; }
+    public int Mes { get; set; }
+    public int Ano { get; set; }
+    public string[] Meses { get; set; } =
+    {
+        "Janeiro", "Fevereiro", "Março",
+        "Abril", "Maio", "Junho", "Julho",
+        "Agosto","Setembro","Outubro",
+        "Novembro","Dezembro"
+    };
+    [Parameter]
+    public DateTime DataInicial { get; set; }
+   protected override void OnInitialized()
+    {
+        Dia = DataInicial.Day;
+        Mes = DataInicial.Month;
+        Ano = DataInicial.Year;
+    }
+}
