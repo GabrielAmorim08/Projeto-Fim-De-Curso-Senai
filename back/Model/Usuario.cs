@@ -15,7 +15,7 @@ public partial class Usuario
 
     public string Confsenha { get; set; } = null!;
 
-    public string? Matricula { get; set; }
+    public string Matricula { get; set; } = null!;
 
     public virtual ICollection<Cargo> Cargos { get; } = new List<Cargo>();
 

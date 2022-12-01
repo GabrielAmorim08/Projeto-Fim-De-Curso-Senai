@@ -11,10 +11,14 @@ go
 create table Usuario(
 	ID int identity primary key,
 	nome varchar(100) not null,
-	email varchar(30) not null,
+	email varchar(MAX) not null,
 	senha varchar(MAX) not null,
 	confsenha varchar(MAX) not null,
-	matricula varchar(10) not null
+	matricula varchar(10) not null,
+	telefone varchar(20),
+	endereco varchar(MAX),
+	UF varchar(10),
+	estado varchar(30)
 );
 create table Token(
 	ID int identity primary key,
