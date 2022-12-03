@@ -17,6 +17,18 @@ public partial class Usuario
 
     public string Matricula { get; set; } = null!;
 
+    public string? Telefone { get; set; }
+
+    public string? Endereco { get; set; }
+
+    public string? Uf { get; set; }
+
+    public string? Estado { get; set; }
+
+    public DateTime? DataNascimento { get; set; }
+
+    public string? Setor { get; set; }
+
     public virtual ICollection<Cargo> Cargos { get; } = new List<Cargo>();
 
     public virtual ICollection<PostAtividade> PostAtividades { get; } = new List<PostAtividade>();

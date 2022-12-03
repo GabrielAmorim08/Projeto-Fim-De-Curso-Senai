@@ -9,5 +9,7 @@ public partial class Cargo
 
     public int? CargoId { get; set; }
 
+    public string? CargoNome { get; set; }
+
     public virtual Usuario? CargoNavigation { get; set; }
 }

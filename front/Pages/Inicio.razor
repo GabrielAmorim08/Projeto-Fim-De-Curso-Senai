@@ -4,47 +4,19 @@
 @inject NavigationManager nav
 @inject ProtectedSessionStorage storage
 @inject UserService service 
-    <h1 class="h1Inicio">Seja bem vindo @Nome</h1>
+<h1 class="h1Inicio">Seja bem vindo @Nome</h1> 
 <div class="container_ini">
     <div class="left">
         <ul class="Inicio">
             <li style="--clr: #F9A7EE;"><a href="/inicio" data-text="&nbsp;Inicio">&nbsp;Inicio&nbsp;</a></li>
             <li style="--clr: #F9A7EE;"><a href="/perfil" data-text="&nbsp;Perfil">&nbsp;Perfil&nbsp;</a></li>
-            <li style="--clr: #F9A7EE"><a href="/atividades" data-text="&nbsp;Atividade">&nbsp;Atividades&nbsp;</a></li>
-            <li style="--clr: #F9A7EE;"><a href="/calendario" data-text="&nbsp;Calendario">&nbsp;Calendario&nbsp;</a></li>
+            <li style="--clr: #F9A7EE"><a href="/atividades" data-text="&nbsp;Atividades">&nbsp;Atividades &nbsp; </a></li>
+            <li style="--clr: #F9A7EE;"><a href="/calendario" data-text="&nbsp;Calendario">&nbsp;Calendario &nbsp; </a></li>
             <li style="--clr: #F9A7EE;"><a href="/SobreNos" data-text="&nbsp;Sobre nós">&nbsp;Sobre nós&nbsp;</a></li>
         </ul>
     </div>
     <br>
 </div>
-<!--
-<footer class="footer">
-        <div class="footer_container">
-            <div class="footer_top">
-                <div class="company_info">
-                    <h2 class="company_logo">ServicesADM</h2>
-                    <p class="company_discription">Sistema web criado afins de aumentar a organização de atividades empresariais</p>
-                    <ul class="footer_ul">
-                        <li class="footer_li">
-                            <a href="#" class="footer_list-link">
-                                <i class="ri-facebook-circle-line"> <img src="imagem/facebook.png"></i>
-                            </a>
-                        </li>  
-                    </ul>
-                    <span class="copyright">...</span>
-                </div>
-                <div>
-                    <h6 class = "footer_title">Microsoft Store</h6>
-                    <ul class="footer_list">
-                        <li class="footer_list-item">
-                            <a href="" class="footer)list0link">About</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-</footer> -->
-
 @code
 {   
     public string Nome;

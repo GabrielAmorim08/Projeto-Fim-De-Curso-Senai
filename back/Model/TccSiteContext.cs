@@ -31,12 +31,15 @@ public partial class TccSiteContext : DbContext
     {
         modelBuilder.Entity<Cargo>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__cargos__3214EC2702EDD7BB");
+            entity.HasKey(e => e.Id).HasName("PK__cargos__3214EC27475DCBC1");
 
             entity.ToTable("cargos");
 
             entity.Property(e => e.Id).HasColumnName("ID");
             entity.Property(e => e.CargoId).HasColumnName("CargoID");
+            entity.Property(e => e.CargoNome)
+                .HasMaxLength(20)
+                .IsUnicode(false);
 
             entity.HasOne(d => d.CargoNavigation).WithMany(p => p.Cargos)
                 .HasForeignKey(d => d.CargoId)
@@ -45,7 +48,7 @@ public partial class TccSiteContext : DbContext
 
         modelBuilder.Entity<PostAtividade>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__PostAtiv__3214EC2721B0C097");
+            entity.HasKey(e => e.Id).HasName("PK__PostAtiv__3214EC2746B25FFB");
 
             entity.ToTable("PostAtividade");
 
@@ -61,7 +64,7 @@ public partial class TccSiteContext : DbContext
 
         modelBuilder.Entity<Token>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Token__3214EC279F93674D");
+            entity.HasKey(e => e.Id).HasName("PK__Token__3214EC2743698752");
 
             entity.ToTable("Token");
 
@@ -77,7 +80,7 @@ public partial class TccSiteContext : DbContext
 
         modelBuilder.Entity<Usuario>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Usuario__3214EC27216FC7D0");
+            entity.HasKey(e => e.Id).HasName("PK__Usuario__3214EC2722DC651A");
 
             entity.ToTable("Usuario");
 
@@ -85,10 +88,17 @@ public partial class TccSiteContext : DbContext
             entity.Property(e => e.Confsenha)
                 .IsUnicode(false)
                 .HasColumnName("confsenha");
+            entity.Property(e => e.DataNascimento).HasColumnType("date");
             entity.Property(e => e.Email)
-                .HasMaxLength(30)
                 .IsUnicode(false)
                 .HasColumnName("email");
+            entity.Property(e => e.Endereco)
+                .IsUnicode(false)
+                .HasColumnName("endereco");
+            entity.Property(e => e.Estado)
+                .HasMaxLength(30)
+                .IsUnicode(false)
+                .HasColumnName("estado");
             entity.Property(e => e.Matricula)
                 .HasMaxLength(10)
                 .IsUnicode(false)
@@ -100,6 +110,17 @@ public partial class TccSiteContext : DbContext
             entity.Property(e => e.Senha)
                 .IsUnicode(false)
                 .HasColumnName("senha");
+            entity.Property(e => e.Setor)
+                .HasMaxLength(1)
+                .IsUnicode(false);
+            entity.Property(e => e.Telefone)
+                .HasMaxLength(20)
+                .IsUnicode(false)
+                .HasColumnName("telefone");
+            entity.Property(e => e.Uf)
+                .HasMaxLength(10)
+                .IsUnicode(false)
+                .HasColumnName("UF");
         });
 
         OnModelCreatingPartial(modelBuilder);
