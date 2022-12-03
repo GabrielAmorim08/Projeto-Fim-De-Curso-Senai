@@ -2,7 +2,6 @@ using Microsoft.AspNetCore.Mvc;
 using dto;
 
 namespace back.Controllers;
-
 using back.Services;
 using Model;
 using Trevisharp.Security.Jwt;
