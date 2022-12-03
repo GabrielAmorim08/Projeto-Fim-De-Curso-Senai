@@ -19,7 +19,7 @@ builder.Services.AddSingleton<CryptoService>(
     provinder => new CryptoService()
     {
         InternalKeySize = 16,
-        UpdatePeriod = TimeSpan.FromDays(1)
+        UpdatePeriod = TimeSpan.FromMinutes(18)
     });
     
 var app = builder.Build();
