@@ -18,7 +18,9 @@ create table Usuario(
 	telefone varchar(20),
 	endereco varchar(MAX),
 	UF varchar(10),
-	estado varchar(30)
+	estado varchar(30),
+	DataNascimento date,
+	Setor varchar,
 );
 create table Token(
 	ID int identity primary key,
@@ -33,9 +35,10 @@ create table PostAtividade(
 	Content varchar(MAX) not null
 
 );
-
+	
 create table cargos(
 		ID int identity primary key,
 		CargoID int references Usuario(ID),
+		CargoNome varchar(20)
 
 );
