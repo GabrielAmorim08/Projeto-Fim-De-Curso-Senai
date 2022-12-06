@@ -50,7 +50,7 @@ public class UserService
     }
     public async Task<UsuarioDTO> GetUserInfo(string token)
     {
-        var result = await client.GetAsync($"user/GetUserInfo/{token}");
+        var result = await client.PostAsJsonAsync($"user/GetUserInfo", token);
         var content = await result.Content.ReadFromJsonAsync<UsuarioDTO>();
         if (content == null)
         {

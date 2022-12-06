@@ -79,8 +79,8 @@ public class UserController : ControllerBase
         return Ok(token);
     }
     
-    [HttpGet("GetUserInfo/{token}")]
-    public async Task<IActionResult> GetUserInfo(string token, [FromServices]CryptoService jwt)
+    [HttpPost("GetUserInfo")]
+    public async Task<IActionResult> GetUserInfo([FromBody] string token, [FromServices]CryptoService jwt)
     {
         try
         {
