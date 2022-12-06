@@ -21,6 +21,8 @@ create table Usuario(
 	estado varchar(30),
 	DataNascimento date,
 	Setor varchar(25),
+	cidade varchar(30),
+	empresa varchar(50)
 );
 create table Token(
 	ID int identity primary key,

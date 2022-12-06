@@ -2,7 +2,6 @@ using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
 using front.Services;
 
-using Radzen;
 
 var builder = WebApplication.CreateBuilder(args);
 
