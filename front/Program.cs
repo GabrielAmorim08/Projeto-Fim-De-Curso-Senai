@@ -10,10 +10,6 @@ string server = "https://localhost:7266";
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 builder.Services.AddSingleton(provinder => new UserService(server));
-        builder.Services.AddScoped<DialogService>();
-        builder.Services.AddScoped<NotificationService>();
-        builder.Services.AddScoped<TooltipService>();
-        builder.Services.AddScoped<ContextMenuService>();
 
 var app = builder.Build();
 

@@ -48,6 +48,7 @@ public class UserController : ControllerBase
         Usuario.Senha = user.Senha;
         Usuario.Confsenha = user.Confsenha;
         context.Add(Usuario);
+        //context.Attach(Usuario);
         context.SaveChanges();
         return Ok("Usuario cadastrado com sucesso");
     }
@@ -70,7 +71,7 @@ public class UserController : ControllerBase
         }
 
         UserInfoToken info = new UserInfoToken();
-        info.Name = user.Nome;
+        info.Nome = user.Nome;
         info.Matricula = possibleUser.Matricula;
         info.email = user.Email;
         var token = jwt.GetToken(info);
@@ -99,6 +100,14 @@ public class UserController : ControllerBase
             userData.Matricula = matricula;
             userData.Nome = user.Nome;
             userData.Email = user.Email;
+            userData.empresa = user.Empresa;
+            userData.Setor = user.Setor;
+            userData.cidade = user.Cidade;
+            userData.endereco = user.Endereco;
+            userData.estado = user.Estado;
+            userData.DataNascimento = user.DataNascimento ?? DateTime.Now;
+            userData.telefone = user.Telefone;
+            userData.UF = user.Uf;
 
             return Ok(userData);
         }

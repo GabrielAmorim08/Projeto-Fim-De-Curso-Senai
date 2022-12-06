@@ -93,7 +93,6 @@
 @code
 { 
     private string loginError = "";
-    private string mensagem = "";
     private string matricula;
     private string nome;
     private string senha;
@@ -107,14 +106,6 @@
       this.email,
       this.senha, 
       this.confsenha);
-      if(confsenha != senha)
-      {
-        mensagem = "As senhas não são iguais";
-      }
-      else if(confsenha == senha & matricula != null)
-      {
-        mensagem = "Usuario cadastrado com sucesso";
-      }
       this.matricula = "";
       this.nome = "";
       this.email = "";

@@ -9,9 +9,9 @@ public partial class PostAtividade
 
     public int? UserId { get; set; }
 
-    public DateTime Moment { get; set; }
+    public DateTime Momento { get; set; }
 
-    public string Content { get; set; } = null!;
+    public string Contexto { get; set; } = null!;
 
     public virtual Usuario? User { get; set; }
 }

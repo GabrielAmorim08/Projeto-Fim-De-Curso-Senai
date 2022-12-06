@@ -3,20 +3,11 @@
 @using Microsoft.AspNetCore.Components.Server.ProtectedBrowserStorage
 @inject NavigationManager nav
 @inject ProtectedSessionStorage storage
-@inject UserService service 
+@inject UserService service
+
 <h1 class="h1Inicio">Seja bem vindo @Nome</h1> 
-<div class="container_ini">
-    <div class="left">
-        <ul class="Inicio">
-            <li style="--clr: #F9A7EE;"><a href="/inicio" data-text="&nbsp;Inicio">&nbsp;Inicio&nbsp;</a></li>
-            <li style="--clr: #F9A7EE;"><a href="/perfil" data-text="&nbsp;Perfil">&nbsp;Perfil&nbsp;</a></li>
-            <li style="--clr: #F9A7EE"><a href="/atividades" data-text="&nbsp;Atividades">&nbsp;Atividades &nbsp; </a></li>
-            <li style="--clr: #F9A7EE;"><a href="/calendario" data-text="&nbsp;Calendario">&nbsp;Calendario &nbsp; </a></li>
-            <li style="--clr: #F9A7EE;"><a href="/SobreNos" data-text="&nbsp;Sobre  nós">&nbsp;Sobre nós&nbsp;</a></li>
-        </ul>
-    </div>
-    <br>
-</div>
+<BeautyNav></BeautyNav>
+
 @code
 {   
     public string Nome;
@@ -29,7 +20,6 @@
         }
         var token = await storage.GetAsync<string>("token");
         var user = await service.GetUserInfo(token.Value);
-
         this.Nome = user.Nome;
         StateHasChanged();
     }

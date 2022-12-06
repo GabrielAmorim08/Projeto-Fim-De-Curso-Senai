@@ -29,7 +29,9 @@ public partial class Usuario
 
     public string? Setor { get; set; }
 
-    public virtual ICollection<Cargo> Cargos { get; } = new List<Cargo>();
+    public string? Cidade { get; set; }
+
+    public string? Empresa { get; set; }
 
     public virtual ICollection<PostAtividade> PostAtividades { get; } = new List<PostAtividade>();
 
