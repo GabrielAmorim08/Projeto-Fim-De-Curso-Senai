@@ -87,7 +87,7 @@
 .EditarPerfil:hover {
     background-color: #fa50d8;
 }
-.Sair
+.SairPer
 {
   width: 150px;
   background-color: #f578dc;
@@ -102,8 +102,7 @@
   cursor: pointer;
   transition: 0.5s;
   position: absolute;
-  left: 750%;
-  top: -0%;
-
+  left: 755%;
+  top: -2%;
 }
   

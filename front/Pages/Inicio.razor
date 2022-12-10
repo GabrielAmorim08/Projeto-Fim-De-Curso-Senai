@@ -8,7 +8,7 @@
 <h1 class="h1Inicio">Seja bem vindo @Nome</h1> 
 
 <div class="container_ini">
-    <BtnSair></BtnSair>
+    <button class="SairIni" onclick = "@Sair">Sair</button>
     <div class="left">
         <ul class="Inicio">
             <li style="--clr: #F9A7EE;"><a href="/perfil" data-text="&nbsp;Perfil">&nbsp;Perfil&nbsp;</a></li>
@@ -21,7 +21,7 @@
 
 @code
 {   
-    public string Nome;
+     public string Nome;
 
      protected override async Task OnAfterRenderAsync(bool firstRender)
     {
@@ -33,6 +33,12 @@
         var user = await service.GetUserInfo(token.Value);
         this.Nome = user.Nome;
         StateHasChanged();
+    }
+    //função sair
+     public async void Sair()
+    {
+        var result = storage.DeleteAsync("token");
+        nav.NavigateTo("/");
     }
 
 }

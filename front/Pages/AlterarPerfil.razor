@@ -6,6 +6,7 @@
 @inject UserService service 
 
 <div class="container_selecao">
+    <button class="SairPer" onclick = "@Sair">Sair</button>
     <div class="select">
         <ul class="Selecao">
             <li style="--clr: #F9A7EE;"><a href="/Inicio" data-text="&nbsp;Inicio&nbsp;">&nbsp;Inicio&nbsp;</a></li>
@@ -129,6 +130,11 @@
         this.DataNascimento );
         this.StateHasChanged();
         nav.NavigateTo("/perfil");
+    }
+    public async void Sair()
+    {
+        var result = storage.DeleteAsync("token");
+        nav.NavigateTo("/");
     }
     
 }

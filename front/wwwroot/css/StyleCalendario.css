@@ -3,3 +3,72 @@
     left: 37%;
     top: 5%;
 }
+.SairCalen
+{
+  width: 150px;
+  background-color: #f578dc;
+  border: none;
+  outline: none;
+  height: 49px;
+  border-radius: 49px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin: 10px 0;
+  cursor: pointer;
+  transition: 0.5s;
+  position: absolute;
+  left: 810%;
+  top: -1%;
+}
+
+@media (max-width: 870px) {
+  .Selecao {
+    min-height: 800px;
+    height: 100vh;
+  }
+  .SairCalen {
+    width: 100%;
+    top: 95%;
+    transform: translate(-50%, -100%);
+    transition: 1s 0.8s ease-in-out;
+  }
+
+  .h1Calendario {
+    transform: translateY(-300px);
+  }
+
+  .h1Calendario {
+    transform: translateY(0px);
+  }
+  
+  .h1Calendario{
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2.5rem 8%;
+    grid-column: 1 / 2;
+  }
+
+
+
+}
+
+@media (max-width: 570px) {
+  .h1Calendario {
+    padding: 0.5rem 1rem;
+  }
+  .container_selecao {
+    padding: 1.5rem;
+  }
+
+  .container_selecao:before {
+    bottom: 72%;
+    left: 50%;
+  }
+
+  .container_selecao.sign-up-mode:before {
+    bottom: 28%;
+    left: 50%;
+  }
+}
