@@ -1,0 +1,69 @@
+
+.Numeros_de_Atividades
+{
+    position: absolute;
+    top: 5%;
+    left: 35%;
+}
+.BotaoToDo {
+    width: 150px;
+    background-color: #f578dc;
+    border: none;
+    outline: none;
+    height: 58px;
+    border-radius: 49px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 10px 0;
+    cursor: pointer;
+    position: absolute;
+    transition: 0.5s;
+    top: 25%;
+    left: 58%;
+}
+.Atividades {
+    position: absolute;
+    left: 37%;
+    top: 35%;
+    transition: 0.5s;
+    text-transform: uppercase;
+    border: none;
+    outline: none;
+}
+.divAtividade{
+    position: absolute;
+    left: 35%;
+    top:  25%;
+    width: 600px;
+}
+.Lista_Atividade
+{
+    width: 350px;
+    text-align: center;
+    background-color: #f0f0f0;
+    margin: 10px 0;
+    height: 55px;
+    border-radius: 55px;
+    display: grid;
+    grid-template-columns: 15% 85%;
+    padding: 0 0.4rem;
+    position: relative;
+}
+.DeletarToDo
+{
+    width: 100px;
+    background-color: #f578dc;
+    border: none;
+    outline: none;
+    height: 30px;
+    border-radius: 49px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 10px 0;
+    cursor: pointer;
+    position: absolute;
+    transition: 0.5s;
+    left: 70%;
+}

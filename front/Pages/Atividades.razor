@@ -1,6 +1,7 @@
 @page "/atividades"
 @using Services;
 @inject UserService service
+@using dto
 
 <div class="container_selecao">
     <div class="select">
@@ -11,3 +12,46 @@
         </ul>
     </div>
 </div>
+
+
+<h1 class="Numeros_de_Atividades">Quantidade de atividades: (@Atividade.Count(todo => !todo.IsDone))</h1>
+
+<div class="divAtividade">
+    <div class="input-field">
+        <i></i>
+        <input  class = "inputAtividade"placeholder="Digite sua atividade" @bind="NovaAtividade" />
+    </div>
+</div>
+<button class = "BotaoToDo"@onclick="AddTodo">Adicionar atividade</button>
+<div class="Atividades">
+    <ul>
+        @foreach (var todo in Atividade)
+        {
+            <li>
+                <input type="checkbox" @bind="todo.IsDone" />
+                <input class="Lista_Atividade" @bind="todo.contexto" readonly/>
+                <button class="DeletarToDo" onclick="@DeletarTodo">Deletar</button>
+                <br>
+            </li>
+            
+        }
+    </ul>
+</div>
+@code {
+    private string? NovaAtividade;
+    private List<PostAtividade> Atividade = new();
+
+    private void AddTodo()
+    {
+        if (!string.IsNullOrWhiteSpace(NovaAtividade))
+        {
+            Atividade.Add(new PostAtividade { contexto = NovaAtividade });
+            NovaAtividade = string.Empty;
+        }
+    }
+    private void DeletarTodo()
+    {
+       
+
+    }
+}

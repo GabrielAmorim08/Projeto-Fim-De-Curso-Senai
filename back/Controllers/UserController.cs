@@ -48,7 +48,6 @@ public class UserController : ControllerBase
         Usuario.Senha = user.Senha;
         Usuario.Confsenha = user.Confsenha;
         context.Add(Usuario);
-
         context.SaveChanges();
         return Ok("Usuario cadastrado com sucesso");
     }
@@ -148,8 +147,9 @@ public class UserController : ControllerBase
         Usuario.DataNascimento = user.DataNascimento;
         Usuario.Telefone = user.telefone;
         Usuario.Uf = user.UF;
-        context.Attach(Usuario);
-        context.SaveChanges();
+
+        context.Entry(Usuario);
+        context.Update(Usuario);
         return Ok("Informações alterado com sucessoo");
     }
 }

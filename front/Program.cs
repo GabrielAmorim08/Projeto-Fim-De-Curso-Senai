@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
 using front.Services;
-
+using BlazorStrap;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,7 +10,7 @@ string server = "https://localhost:7266";
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 builder.Services.AddSingleton(provinder => new UserService(server));
-
+builder.Services.AddBlazorStrap();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

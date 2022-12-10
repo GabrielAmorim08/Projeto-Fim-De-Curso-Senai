@@ -7,8 +7,8 @@
 .h1Perfil
 {
     position: absolute;
-   top: 5%;
-   left: 38%;
+    top: 5%;
+    left: 38%;
 
 }
 .divPerfil
@@ -63,7 +63,6 @@
 .input_Perfil input::placeholder {
     color: black;
     text-overflow: initial;
-    text-align: center;
     outline: none;
     transition: 0.5s;
 }
@@ -87,5 +86,24 @@
 }
 .EditarPerfil:hover {
     background-color: #fa50d8;
-  }
+}
+.Sair
+{
+  width: 150px;
+  background-color: #f578dc;
+  border: none;
+  outline: none;
+  height: 49px;
+  border-radius: 49px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin: 10px 0;
+  cursor: pointer;
+  transition: 0.5s;
+  position: absolute;
+  left: 750%;
+  top: -0%;
+
+}
   

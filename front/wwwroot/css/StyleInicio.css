@@ -6,14 +6,15 @@
   font-family: "Poppins", sans-serif;
 }
 .h1Inicio{
-  position: relative;
-  left: 34%;
-  margin-top: 2%;
+  position: absolute;
+  left: 37%;
+  top: 5%;
 }
 .container_ini{
   display: flex;
-  justify-content: center;
-  align-items: center;
+  position: absolute;
+  left: 45%;
+  top: 30%;
   min-height: 650px;
 }
 .Inicio{
@@ -47,4 +48,27 @@
 .Inicio li a:hover::before{
   width: 100%;
   filter: drop-shadow(0 0 25px var(--clr));
+}
+.Animated_Shape
+{
+  background: url(Animated_Shape.svg) no-repeat;
+}
+.Sair
+{
+  width: 150px;
+  background-color: #f578dc;
+  border: none;
+  outline: none;
+  height: 49px;
+  border-radius: 49px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin: 10px 0;
+  cursor: pointer;
+  transition: 0.5s;
+  position: absolute;
+  left: 310%;
+  top: -38%;
+
 }

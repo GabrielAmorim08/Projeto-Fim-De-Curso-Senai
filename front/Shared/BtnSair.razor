@@ -1,0 +1,15 @@
+@inject NavigationManager nav
+@using Microsoft.AspNetCore.Components.Server.ProtectedBrowserStorage
+@inject ProtectedSessionStorage storage
+
+<button class="Sair" onclick = "@Sair">Sair</button>
+
+@code
+{
+    //função sair
+     public async void Sair()
+    {
+        var result = storage.DeleteAsync("token");
+        nav.NavigateTo("/");
+    }
+}

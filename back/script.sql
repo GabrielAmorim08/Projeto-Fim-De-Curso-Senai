@@ -1,3 +1,4 @@
+
 use master
 go
 if exists(select * from sys.databases where name = 'tcc_site')
@@ -10,11 +11,11 @@ go
 
 create table Usuario(
 	ID int identity primary key,
-	nome varchar(100) not null,
-	email varchar(MAX) not null,
-	senha varchar(MAX) not null,
-	confsenha varchar(MAX) not null,
-	matricula varchar(10) not null,
+	nome varchar(100),
+	email varchar(MAX),
+	senha varchar(MAX),
+	confsenha varchar(MAX),
+	matricula varchar(10),
 	telefone varchar(20),
 	endereco varchar(MAX),
 	UF varchar(10),
@@ -35,4 +36,9 @@ create table PostAtividade(
 	UserID int references Usuario(ID),
 	Momento datetime not null,
 	Contexto varchar(MAX) not null
+);
+create table Cargos(
+	ID int identity primary key,
+	UserID int references Usuario(ID),
+	Cargo varchar(50)
 );

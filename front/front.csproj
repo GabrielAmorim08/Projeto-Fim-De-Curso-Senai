@@ -7,6 +7,7 @@
   <ItemGroup>
     <PackageReference Include="Radzen.Blazor" Version="4.3.7" />
     <PackageReference Include="Syncfusion.Blazor" Version="20.3.0.57" />
+    <PackageReference Include="BlazorStrap" Version="5.0.106" />
   </ItemGroup>
 
   <PropertyGroup>

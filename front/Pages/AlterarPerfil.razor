@@ -9,6 +9,7 @@
     <div class="select">
         <ul class="Selecao">
             <li style="--clr: #F9A7EE;"><a href="/Inicio" data-text="&nbsp;Inicio&nbsp;">&nbsp;Inicio&nbsp;</a></li>
+            <li style="--clr: #F9A7EE"><a href="/perfil" data-text="&nbsp;Perfil&nbsp;">&nbsp;Perfil&nbsp; </a></li>
             <li style="--clr: #F9A7EE"><a href="/atividades" data-text="&nbsp;Atividades&nbsp;">&nbsp;Atividades &nbsp; </a></li>
             <li style="--clr: #F9A7EE;"><a href="/calendario" data-text="&nbsp;Calendario&nbsp;">&nbsp;Calendario &nbsp; </a></li>
         </ul>
@@ -19,62 +20,62 @@
     <label class="TextPerfil">Nome:</label>
     <div class="input_Perfil">
         <i></i>
-        <input type="text" placeholder="@nome"/>
+        <input type="text" placeholder="@nome" @bind-value = "nome"/>
     </div>
     <label class="TextPerfil">Matricula:</label>
     <div class="input_Perfil">
         <i></i>
-        <input type="text" placeholder="@matricula" />
+        <input type="text" placeholder="@matricula" @bind-value = "matricula"/>
     </div>
     <label class="TextPerfil">Email:</label>
     <div class="input_Perfil">
         <i></i>
-        <input type="email" placeholder="    @email"/>
+        <input type="email" placeholder="@email" @bind-value = "email"/>
     </div>
     <label class="TextPerfil">Telefone:</label>
     <div class="input_Perfil">
         <i></i>
-        <input type="tel" placeholder="@telefone"/>
+        <input type="tel" placeholder="@telefone" @bind-value = "telefone"/>
     </div>
     <label class="TextPerfil">endereço:</label>
     <div class="input_Perfil">
         <i></i>
-        <input type="text" placeholder="@endereco"/>
+        <input type="text" placeholder="@endereco" @bind-value = "endereco"/>
     </div>
     <label class="TextPerfil">Setor:</label>
     <div class="input_Perfil">
         <i></i>
-        <input type="text" placeholder="@Setor"/>
+        <input type="text" placeholder="@Setor "@bind-value = "Setor"/>
     </div>
 </div>
 <div class="divPerfilTwo">
     <label class="TextPerfil">Empresa:</label>
     <div class="input_Perfil">
         <i></i>
-        <input type="text" placeholder="@empresa"/>
+        <input type="text" placeholder="@empresa" @bind-value = "empresa"/>
     </div>
     <label class="TextPerfil">Cidade:</label>
     <div class="input_Perfil">
         <i></i>
-        <input type="text" placeholder="@cidade"/>
+        <input type="text" placeholder="@cidade" @bind-value = "cidade"/>
     </div>
     <label class="TextPerfil">Estado:</label>
     <div class="input_Perfil">
         <i></i>
-        <input type="text" placeholder="@estado"/>
+        <input type="text" placeholder="@estado" @bind-value = "estado"/>
     </div>
     <label class="TextPerfil">UF:</label>
     <div class="input_Perfil">
         <i></i>
-        <input type="text" placeholder="@UF"/>
+        <input type="text" placeholder="@UF" @bind-value = "UF"/>
     </div>
     <label class="TextPerfil">Data de nascimento:</label>
     <div class="input_Perfil">
         <i></i>
-        <input type="Date" placeholder="@DataNascimento"/>
+        <input type="Date" placeholder="@DataNascimento" @bind-value = "DataNascimento"/>
     </div>
 </div>
-<button class="EditarPerfil" onclick="">
+<button class="EditarPerfil" onclick="@UpdateInfo">
     Salvar
 </button>
 @code
@@ -114,22 +115,21 @@
     }
     public async void UpdateInfo()
     {
-      await service.UpdateInfo(
+    await service.UpdateInfo(
         this.matricula,
         this. nome,
         this.email,
         this.endereco,
-        this. UF,
-        this. estado,
-        this. cidade,
-        this. Setor,
-        this. telefone,
-        this. empresa,
+        this.UF,
+        this.estado,
+        this.cidade,
+        this.Setor,
+        this.telefone,
+        this.empresa,
         this.DataNascimento );
-      this.StateHasChanged();    
+        this.StateHasChanged();
+        nav.NavigateTo("/perfil");
     }
-    {
-        nav.NavigateTo("/perfil")
-    }
+    
 }
 
