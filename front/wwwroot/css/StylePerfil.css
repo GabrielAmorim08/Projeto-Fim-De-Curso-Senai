@@ -1,0 +1,91 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    transition: 0.5s;
+}
+
+.h1Perfil
+{
+    position: absolute;
+   top: 5%;
+   left: 38%;
+
+}
+.divPerfil
+{
+    position: absolute;
+    left: 30%;
+    top: 15%;
+    width: 100%;
+}
+.divPerfilTwo
+{
+    position: absolute;
+    left: 50%;
+    top: 15%;
+    width: 100%;
+}
+
+.input_Perfil {
+    max-width: 300px;
+    width: 100%;
+    background-color: #f0f0f0;
+    margin: 10px 0;
+    height: 55px;
+    border-radius: 55px;
+    display: grid;
+    grid-template-columns: 15% 85%;
+    padding: 0 0.4rem;
+    position: relative;
+    transition: 0.5s;
+}
+
+.input_Perfil i {
+    line-height: 55px;
+    color: black;
+    transition: 1.5s;
+    font-size: 1.1rem;
+    transition: 0.5s;
+}
+  
+.input_Perfil input {
+    background: none;
+    outline: none;
+    border:none;
+    line-height: 2;
+    overflow: hidden; 
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: black;
+    transition: 0.5s;
+  }
+  
+.input_Perfil input::placeholder {
+    color: black;
+    text-overflow: initial;
+    text-align: center;
+    outline: none;
+    transition: 0.5s;
+}
+.EditarPerfil
+{
+    width: 150px;
+    background-color: #f578dc;
+    border: none;
+    outline: none;
+    height: 49px;
+    border-radius: 49px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 10px 0;
+    cursor: pointer;
+    position: absolute;
+    transition: 0.5s;
+    top: 80%;
+    left: 54%;
+}
+.EditarPerfil:hover {
+    background-color: #fa50d8;
+  }
+  

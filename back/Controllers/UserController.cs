@@ -48,7 +48,7 @@ public class UserController : ControllerBase
         Usuario.Senha = user.Senha;
         Usuario.Confsenha = user.Confsenha;
         context.Add(Usuario);
-        //context.Attach(Usuario);
+
         context.SaveChanges();
         return Ok("Usuario cadastrado com sucesso");
     }
@@ -132,8 +132,24 @@ public class UserController : ControllerBase
     }
 
     [HttpPost("Update")]
-    public IActionResult UpdateName()
+    public IActionResult UpdateName([FromBody] UsuarioDTO user)
     {
-        throw new NotImplementedException();
+        using TccSiteContext context = new TccSiteContext();
+        List<string> errors = new List<string>();
+        Usuario Usuario = new Usuario();
+        Usuario.Matricula = user.Matricula;
+        Usuario.Nome = user.Nome;
+        Usuario.Email = user.Email;
+        Usuario.Estado = user.estado;
+        Usuario.Empresa = user.empresa;
+        Usuario.Setor = user.Setor;
+        Usuario.Cidade = user.cidade;
+        Usuario.Endereco = user.endereco;
+        Usuario.DataNascimento = user.DataNascimento;
+        Usuario.Telefone = user.telefone;
+        Usuario.Uf = user.UF;
+        context.Attach(Usuario);
+        context.SaveChanges();
+        return Ok("Informações alterado com sucessoo");
     }
 }

@@ -48,6 +48,34 @@ public class UserService
         var token = await result.Content.ReadAsStringAsync();
         return token;
     }
+        public async Task UpdateInfo(
+        string matricula,
+        string nome,
+        string email,
+        string endereco,
+        string UF,
+        string estado,
+        string cidade,
+        string Setor,
+        string telefone,
+        string empresa,
+        DateTime DataNascimento 
+        )
+        {
+            UsuarioDTO user = new UsuarioDTO();
+            user.Matricula = matricula;
+            user.Nome = nome;
+            user.Email = email;
+            user.telefone = telefone;
+            user.endereco = endereco;
+            user.UF = UF;
+            user.estado = estado;
+            user.cidade = cidade;
+            user.empresa = empresa;
+            user.Setor = Setor;
+            user.DataNascimento = DataNascimento;
+            var result = await client.PostAsJsonAsync("user/Update", user);
+        }
     public async Task<UsuarioDTO> GetUserInfo(string token)
     {
         var result = await client.PostAsJsonAsync($"user/GetUserInfo", token);
@@ -58,4 +86,5 @@ public class UserService
         }
         return content;
     }
+
 }

@@ -3,16 +3,15 @@
 @inject UserService service;
 @using BlazorCalendar
 
-<BeautyNav></BeautyNav>
-<div class="container_calen">
-    <div class="left">
-        <ul class="Calendario">
-            <li><a href="/inicio">Inicio</a></li>
-            <li><a href="/perfil">Perfil</a></li>
-            <li><a href="/atividades">Atividades</a></li>
-            <li><a class="active" href="/calendario">Calendario</a></li>
+<div class="container_selecao">
+    <div class="select">
+        <ul class="Selecao">
+            <li style="--clr: #F9A7EE;"><a href="/Inicio" data-text="&nbsp;Inicio&nbsp;">&nbsp;Inicio&nbsp;</a></li>
+            <li style="--clr: #F9A7EE;"><a href="/perfil" data-text="&nbsp;Perfil&nbsp;">&nbsp;Perfil&nbsp;</a></li>
+            <li style="--clr: #F9A7EE"><a href="/atividades" data-text="&nbsp;Atividades&nbsp;">&nbsp;Atividades &nbsp; </a></li>
         </ul>
     </div>
+</div>
     <h1>Calendario de atividades</h1>
     <select @onchange="LoadCalender">
         @foreach (string MonthNames in monthNames)
@@ -50,7 +49,6 @@
             }
         </tbody>
     </table>
-</div>
 @code{
     List<string> monthNames = new List<string>();
     List<string> days = new List<string>();

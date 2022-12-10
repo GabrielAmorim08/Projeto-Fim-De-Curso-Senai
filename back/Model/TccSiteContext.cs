@@ -23,13 +23,13 @@ public partial class TccSiteContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlServer("Data Source=SNCCHLAB02F29\\TEW_SQLEXPRESS;Initial Catalog=tcc_site;Integrated Security=True;MultipleActiveResultSets=True;TrustServerCertificate=True");
+        => optionsBuilder.UseSqlServer("Data Source=CLAUDIAAMORIM\\SQLEXPRESS;Initial Catalog=tcc_site;Integrated Security=True;MultipleActiveResultSets=True;TrustServerCertificate=True");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<PostAtividade>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__PostAtiv__3214EC274B4F6FD6");
+            entity.HasKey(e => e.Id).HasName("PK__PostAtiv__3214EC2764BFD84D");
 
             entity.ToTable("PostAtividade");
 
@@ -40,12 +40,12 @@ public partial class TccSiteContext : DbContext
 
             entity.HasOne(d => d.User).WithMany(p => p.PostAtividades)
                 .HasForeignKey(d => d.UserId)
-                .HasConstraintName("FK__PostAtivi__UserI__15502E78");
+                .HasConstraintName("FK__PostAtivi__UserI__29572725");
         });
 
         modelBuilder.Entity<Token>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Token__3214EC27AB02ADED");
+            entity.HasKey(e => e.Id).HasName("PK__Token__3214EC273A8ECB60");
 
             entity.ToTable("Token");
 
@@ -56,12 +56,12 @@ public partial class TccSiteContext : DbContext
 
             entity.HasOne(d => d.User).WithMany(p => p.Tokens)
                 .HasForeignKey(d => d.UserId)
-                .HasConstraintName("FK__Token__UserId__1273C1CD");
+                .HasConstraintName("FK__Token__UserId__267ABA7A");
         });
 
         modelBuilder.Entity<Usuario>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Usuario__3214EC27DDDE1C34");
+            entity.HasKey(e => e.Id).HasName("PK__Usuario__3214EC27930BE15E");
 
             entity.ToTable("Usuario");
 

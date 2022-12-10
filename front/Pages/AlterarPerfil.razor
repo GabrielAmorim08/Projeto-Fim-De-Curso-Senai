@@ -1,0 +1,135 @@
+@page "/Alterarperfil"
+@using Services;
+@using Microsoft.AspNetCore.Components.Server.ProtectedBrowserStorage
+@inject NavigationManager nav
+@inject ProtectedSessionStorage storage
+@inject UserService service 
+
+<div class="container_selecao">
+    <div class="select">
+        <ul class="Selecao">
+            <li style="--clr: #F9A7EE;"><a href="/Inicio" data-text="&nbsp;Inicio&nbsp;">&nbsp;Inicio&nbsp;</a></li>
+            <li style="--clr: #F9A7EE"><a href="/atividades" data-text="&nbsp;Atividades&nbsp;">&nbsp;Atividades &nbsp; </a></li>
+            <li style="--clr: #F9A7EE;"><a href="/calendario" data-text="&nbsp;Calendario&nbsp;">&nbsp;Calendario &nbsp; </a></li>
+        </ul>
+    </div>
+</div>
+<h1 class="h1Perfil">Informações pessoais</h1>
+<div class="divPerfil">
+    <label class="TextPerfil">Nome:</label>
+    <div class="input_Perfil">
+        <i></i>
+        <input type="text" placeholder="@nome"/>
+    </div>
+    <label class="TextPerfil">Matricula:</label>
+    <div class="input_Perfil">
+        <i></i>
+        <input type="text" placeholder="@matricula" />
+    </div>
+    <label class="TextPerfil">Email:</label>
+    <div class="input_Perfil">
+        <i></i>
+        <input type="email" placeholder="    @email"/>
+    </div>
+    <label class="TextPerfil">Telefone:</label>
+    <div class="input_Perfil">
+        <i></i>
+        <input type="tel" placeholder="@telefone"/>
+    </div>
+    <label class="TextPerfil">endereço:</label>
+    <div class="input_Perfil">
+        <i></i>
+        <input type="text" placeholder="@endereco"/>
+    </div>
+    <label class="TextPerfil">Setor:</label>
+    <div class="input_Perfil">
+        <i></i>
+        <input type="text" placeholder="@Setor"/>
+    </div>
+</div>
+<div class="divPerfilTwo">
+    <label class="TextPerfil">Empresa:</label>
+    <div class="input_Perfil">
+        <i></i>
+        <input type="text" placeholder="@empresa"/>
+    </div>
+    <label class="TextPerfil">Cidade:</label>
+    <div class="input_Perfil">
+        <i></i>
+        <input type="text" placeholder="@cidade"/>
+    </div>
+    <label class="TextPerfil">Estado:</label>
+    <div class="input_Perfil">
+        <i></i>
+        <input type="text" placeholder="@estado"/>
+    </div>
+    <label class="TextPerfil">UF:</label>
+    <div class="input_Perfil">
+        <i></i>
+        <input type="text" placeholder="@UF"/>
+    </div>
+    <label class="TextPerfil">Data de nascimento:</label>
+    <div class="input_Perfil">
+        <i></i>
+        <input type="Date" placeholder="@DataNascimento"/>
+    </div>
+</div>
+<button class="EditarPerfil" onclick="">
+    Salvar
+</button>
+@code
+{
+    public string nome;
+    public string matricula;
+    public string email;
+    public string telefone;
+    public string endereco;
+    public string UF;
+    public string estado;
+    public string cidade;
+    public string empresa;
+    public string Setor;
+    public DateTime DataNascimento;
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if(!firstRender)
+        {
+            return;
+        }
+        var token = await storage.GetAsync<string>("token");
+        var user = await service.GetUserInfo(token.Value);
+
+        this.nome = user.Nome;
+        this.matricula = user.Matricula;
+        this.email = user.Email;
+        this.telefone = user.telefone;
+        this.estado = user.estado;
+        this.cidade = user.cidade;
+        this.UF = user.UF;
+        this.empresa = user.empresa;
+        this.endereco = user.endereco;
+        this.Setor = user.Setor;
+        StateHasChanged();
+    }
+    public async void UpdateInfo()
+    {
+      await service.UpdateInfo(
+        this.matricula,
+        this. nome,
+        this.email,
+        this.endereco,
+        this. UF,
+        this. estado,
+        this. cidade,
+        this. Setor,
+        this. telefone,
+        this. empresa,
+        this.DataNascimento );
+      this.StateHasChanged();    
+    }
+    {
+        nav.NavigateTo("/perfil")
+    }
+}
+

@@ -5,20 +5,68 @@
 @inject ProtectedSessionStorage storage
 @inject UserService service 
 
-    <p>@nome</p>
-    <p>@matricula</p>
-    <p>@email</p>]
-    <p>@telefone</p>
-    <p>@endereco</p>
-    <p>@Setor</p>
-    <p>@empresa</p>
-    <p>@cidade</p>   
-    <p>@estado</p>
-    <p>@UF</p>
-    <p>@DataNascimento</p>
-    
-<BeautyNav></BeautyNav>
 
+<div class="container_selecao">
+    <div class="select">
+        <ul class="Selecao">
+            <li style="--clr: #F9A7EE;"><a href="/Inicio" data-text="&nbsp;Inicio&nbsp;">&nbsp;Inicio&nbsp;</a></li>
+            <li style="--clr: #F9A7EE"><a href="/atividades" data-text="&nbsp;Atividades&nbsp;">&nbsp;Atividades &nbsp; </a></li>
+            <li style="--clr: #F9A7EE;"><a href="/calendario" data-text="&nbsp;Calendario&nbsp;">&nbsp;Calendario &nbsp; </a></li>
+        </ul>
+    </div>
+</div>
+<h1 class="h1Perfil">Informações pessoais</h1>
+<div class="divPerfil">
+        <div class="input_Perfil">
+            <i>Nome:</i>
+            <input type="text" placeholder="@nome"disabled/>
+        </div>
+        <div class="input_Perfil">
+            <i>Matricula:</i>
+            <input type="Number" placeholder="@matricula"disabled />
+        </div>
+            <div class="input_Perfil">
+            <i>email: </i>
+            <input type="email" placeholder="    @email"readonly/>
+        </div>
+        <div class="input_Perfil">
+            <i>telefone:</i>
+            <input type="tel" placeholder="@telefone"disabled/>
+        </div>
+            <div class="input_Perfil">
+            <i>endereço:</i>
+            <input type="lock" placeholder="@endereco"disabled/>
+        </div>
+            <div class="input_Perfil">
+            <i>Setor:</i>
+            <input type="lock" placeholder="@Setor"disabled/>
+        </div>
+</div>
+<div class="divPerfilTwo">
+            <div class="input_Perfil">
+            <i>Empresa:</i>
+            <input type="text" placeholder="@empresa"/>
+        </div>
+                <div class="input_Perfil">
+            <i>Cidade:</i>
+            <input type="text" placeholder="@cidade"disabled/>
+        </div>
+                <div class="input_Perfil">
+            <i>Estado:</i>
+            <input type="text" placeholder="@estado"disabled/>
+        </div>
+                <div class="input_Perfil">
+            <i>UF:</i>
+            <input type="text" placeholder="@UF"disabled/>
+        </div>
+        <div class="input_Perfil">
+            <i>Data: </i>
+            <input type="date" placeholder="@DataNascimento"disabled/>
+        </div>
+</div>
+<button class="EditarPerfil" onclick="@AlterarPerfil">
+    Alterar dados
+</button>
 @code
 {
     public string nome;
@@ -46,7 +94,17 @@
         this.matricula = user.Matricula;
         this.email = user.Email;
         this.telefone = user.telefone;
+        this.estado = user.estado;
+        this.cidade = user.cidade;
+        this.UF = user.UF;
+        this.empresa = user.empresa;
+        this.endereco = user.endereco;
+        this.Setor = user.Setor;
         StateHasChanged();
+    }
+    public async void AlterarPerfil()
+    {
+        nav.NavigateTo("/AlterarPerfil");
     }
 }
 
